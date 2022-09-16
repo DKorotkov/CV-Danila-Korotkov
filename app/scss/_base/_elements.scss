@@ -1,0 +1,198 @@
+@use "__config" as *;
+@use "sass:map";
+
+// --------------------------------------ОБНУЛЕНИE И ОБЩИЕ ПАРАМЕТРЫ--------------------------------------
+
+// необходимо Модофицировать этот элемент только для тех, на кого может попасть фокус
+* {
+   outline-offset: 0;
+   transition: outline-offset 0.2s linear;
+}
+
+html,
+body {
+   width: 100%;
+   min-width: var(--minWidth);
+   accent-color: var(--clr-primary);
+}
+
+*::selection { // Цвет выделения текста
+   background-color: var(--clr-primary);
+   color: var(--clr-bg-main);
+}
+
+img,
+picture {
+   width: 100%;
+   // max-width: 100%;
+   // height: inherit;
+   object-fit: cover;
+   // aspect-ratio: attr(width) / attr(height);
+   // background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
+}
+
+picture {
+   display: flex;
+}
+
+// ----------------------------------------------СТАНДАРТНЫЕ КЛАССЫ---------------------------------------------
+
+.body {
+   display: flex;
+   flex-direction: column;
+   
+   font-family: system-ui, system, sans-serif;
+   font-size: var(--fs-body);
+   letter-spacing: rem(0.5);
+
+   @media (min-width: 70rem) {
+      // flex-direction: row;
+      // display: grid;
+      // grid-template-columns: 1fr 3fr;
+      // grid-template-rows: 1fr;
+   }
+
+   &:not(:has(.main__vertex)) {
+      --sz-aside-width: max(9.375rem,25%);
+   }
+}
+
+.fonts-loaded .body {
+   font-family: var(--ff-body);
+}
+
+// .main {
+//    flex-grow: 1;
+// }
+
+// .header,
+// .main,
+// .footer {
+//    flex-shrink: 0;
+// }
+
+// ____________________Обычный контейнер для респонза_________
+.container {
+   width: min(var(--maxWidth), 100% - (var(--sz-main-padding) * 2));
+   margin-inline: auto;
+}
+
+// _________________Класс для скрытия блоков, но сохранения для скрин ридеров____________
+.clipped {
+   position: absolute !important;
+   clip: rect(1px 1px 1px 1px);
+   clip: rect(1px, 1px, 1px, 1px);
+   padding: 0 !important;
+   border: 0 !important;
+   height: 1px !important;
+   width: 1px !important;
+   overflow: hidden;
+}
+
+// _________________Класс для кнопки "Пропустить навигацию____________
+.skip-nav-link {
+   position: absolute;
+   left: rem(5);
+   transform: translateY(-120%);
+   transition: transform 300ms ease-in;
+
+   background-color: #fff;
+   padding: rem(5) rem(10);
+   color: var(--clr-primary);
+
+   &:focus {
+      transform: translateY(0);
+   }
+}
+
+// ________Класс для полифила focus_____________________
+.js-focus-visible :focus:not(.focus-visible) {
+   outline: none;
+}
+.focus-visible {
+   @include focus;
+}
+
+// __________Класс для работы с grid___________________
+[class*="grid-"] {
+   display: grid;
+   gap: rem(10);
+}
+
+.grid- {
+   &auto-columns {
+      grid-template-columns: repeat(auto-fit, minmax(min(rem(150), 100%), 1fr));
+   }
+
+   &even-columns {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+   }
+}
+
+// where делает специфичность калсса = 0, а сам селектор можно использовать для организации отстов
+:where(.flow :not(:first-child)) {
+   margin-top: 1rem;
+}
+
+// __________Класс для работы с переменными___________________
+.fw-regular {
+   font-weight: var(--fw-regular);
+}
+
+.fs-400 {
+   font-size: var(--fs-16);
+}
+
+.padding-block-400 {
+   padding-block: var(--space-sm);
+}
+
+
+:where(h1) {
+   font-family: var(--ff-heading);
+   font-size: var(--fs-48);
+
+   @media (min-width: (50rem)) { 
+      font-size: var(--fs-72);
+      font-weight: var(--fw-bold);
+      line-height: 1.1;
+   }
+}
+
+:where(h2) {
+   font-family: var(--ff-heading);
+   font-size: var(--fs-48);
+   font-weight: var(--fw-semi-bold);
+}
+
+:where(h3) {
+   font-family: var(--ff-heading);
+   font-size: var(--fs-36);
+   font-weight: var(--fw-semi-bold);
+}
+
+:where(h4) {
+   font-family: var(--ff-heading);
+   font-size: var(--fs-24);
+   font-weight: var(--fw-semi-bold);
+}
+
+:where(h5) {
+   font-family: var(--ff-heading);
+   font-size: var(--fs-20);
+   font-weight: var(--fw-semi-bold);
+}
+
+:where(a) {
+   text-decoration: none;
+   color: var(--clr-black);
+}
+
+:where(a:where(:hover, :focus-visible)) {
+   text-decoration: underline;
+}
+
+.box-shadow {
+   box-shadow: 0 0 20px 5px rgba($color: #000000, $alpha: 0.6);
+}

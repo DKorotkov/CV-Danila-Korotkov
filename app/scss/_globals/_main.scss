@@ -1,0 +1,75 @@
+@use "__config" as *;
+
+.main {
+   --sv-vertex: 60%;
+   flex-grow: 1;
+   padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
+  
+
+   @media (min-width: 70rem) {
+      padding-block:  var(--sz-main-padding);
+   }
+
+   &:has(&__vertex) {
+      @media (min-width: 70rem) {
+         display: grid;
+      }
+   }
+
+   &:has(&__vertex) &__container {
+     @media (min-width: 70em) {
+      grid-template-columns: calc(var(--sz-aside-width) / 2) var(--sz-aside-width) 1fr;
+     }
+   }
+
+   &:has(&__vertex) &__content {
+     @media (min-width: 70em) {
+         display: flex;
+         grid-column-start: 3;
+         flex-direction: column;
+     }
+   }
+
+   &:has(&__vertex) &__body {
+     @media (min-width: 70em) {
+         margin-block: auto;
+     }
+   }
+   
+   &__header {
+      text-transform: uppercase;
+      font-weight: var(--fw-bold);
+      padding-top: calc(var(--fs-logo) / 2);
+      justify-self: flex-start;
+      @include rfs(42px);
+   }
+   
+   &__container {
+      @media (min-width: 70em) {
+         display: grid;
+         grid-template-columns: var(--sz-aside-width) 1fr;
+      }
+   }
+   
+   &__content {
+      @media (min-width: 70em) {
+         position: relative;
+         padding-left: calc(var(--sz-main-padding) * 2);
+         z-index: 2;
+         grid-column-start: 2;
+      }
+   }
+
+   &__body {
+     
+   }
+
+   &__vertex {
+      
+      @media (min-width: 70em) {
+         grid-column-start: 2;
+         max-height: calc(100vh - var(--sz-main-padding) * 2);
+         align-self: center;
+      }
+   }
+}

@@ -1,0 +1,7 @@
+node_modules
+source
+# dist
+*.code-workspace
+gulp
+gulpfile.js
+/*.json

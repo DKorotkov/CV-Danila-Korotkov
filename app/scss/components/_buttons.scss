@@ -1,0 +1,30 @@
+@use "__config" as *;
+
+button:where([class]),
+a:where(.btn) {
+   display: inline-block;
+   background-color: transparent;
+   border: none;
+   padding: 0;
+   margin: 0;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.btn {
+   padding: rem(8) rem(16);
+   text-transform: uppercase;
+   border-radius: rem(30);
+   border: rem(2) solid var(--clr-black);
+   font-weight: var(--fw-bold);
+   letter-spacing: rem(2);
+
+   &:where(:hover, :focus-visible) {
+      
+   }
+
+   &:disabled {
+      border-color: var(--clr-silver);
+      color: var(--clr-silver);
+   }
+}

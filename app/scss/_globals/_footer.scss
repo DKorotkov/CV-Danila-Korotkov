@@ -1,0 +1,31 @@
+@use "__config" as *;
+
+.footer {
+   padding-block: var(--sz-main-padding);
+   background-color: var(--clr-primary);
+   color: var(--clr-white);
+
+   @media (min-width: 70em) {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      width: 100%;
+   }
+
+   &__container {
+   }
+
+   &__contacts {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: auto;
+      gap: rem(24);
+
+      @media (min-width: 70em) {
+         flex-direction: column;
+      }
+   }
+
+}

@@ -1,0 +1,13 @@
+@use "__config" as *;
+
+.aside {
+   @media (min-width: 70em) {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: var(--sz-aside-width);
+      background-color: var(--clr-primary);
+      z-index: -1;
+   }   
+}

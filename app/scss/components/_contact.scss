@@ -1,0 +1,42 @@
+@use "__config" as *;
+
+
+.contact {
+   
+
+   &__term {
+      font-weight: var(--fw-semi-bold);
+      padding-bottom: em(5,16);
+      @include rfs(16px);
+   }
+
+   &__definition {
+   }
+
+   &__link {
+      color: var(--clr-white);
+   }
+
+   &__soicals {
+      display: flex;
+      gap: rem(16);
+      
+   }
+
+   &__soicals-item {
+      width: rem(24);
+      height: rem(24);
+   }
+
+   &__soicals-item > a {
+      display: block;
+      height: 100%;
+   }
+
+   &__icon {
+      fill: var(--clr-white);
+      width: 100%;
+      aspect-ratio: 1;
+   }
+}
+

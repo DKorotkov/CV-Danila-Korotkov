@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчкиа Данилы Короткова ", "keywords": "Ключевые слова", "title": " Обо мне ", "site_name": " Данила Коротков CV ", "socials": { "autor": " Данила Коротков ", "copyright": " Данила Коротков ", "adress":
+   "danila.korotkov@gmail.com", "image": "img/img1.jpeg", "link": "/index.html", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
+   <body class="body">
+      @@include('html/_header.html')
+      <aside class="aside"></aside>
+      <main class="main" id="main-content">
+         <div class="container main__container">
+            <div class="main__vertex box-shadow">
+               <img src="img/dk.jpg" alt="Фотография Данилы Короткова" />
+            </div>
+            <div class="about main__content">
+               <h1 class="clipped1 main__header">Обо мне</h1>
+               <div class="main__body">
+                  <h2 class="about__header">Данила <em>Коротков</em></h2>
+                  <span class="about__job">Front-End разработчик</span>
+                  <p class="about__inforamtion">Привет Мир! Здесь будет небольшой текст, который немного расскажет обо мне</p>
+                  <dl class="about__stack">
+                     <dt>Мой основной стэк:</dt>
+                     <dd>
+                        <ul>
+                           <li>html</li>
+                           <li>js</li>
+                           <li>sass</li>
+                           <li>gulp</li>
+                           <li>wp</li>
+                        </ul>
+                     </dd>
+                  </dl>
+                  <ul class="about__fast-links" role="list" aria-label="Быстрые ссылки">
+                     <li class="about__fast-link" role="listitem">
+                        <a class="btn" href="#">портфолио</a>
+                     </li>
+                     <li class="about__fast-link" role="listitem">
+                        <a class="btn" href="#">резюме</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('html/_footer.html') @@include('html/_scripts.html')
+   </body>
+</html>

@@ -1,0 +1,11 @@
+// ---------------------Общие стили------------------------
+@forward "_base";
+@forward "__config";
+@forward "_globals";
+// --------------------------------------------------------
+
+@forward "pages";
+@forward "blocks";
+@forward "components";
+
+// @forward "vendors";
