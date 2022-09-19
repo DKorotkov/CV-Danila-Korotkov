@@ -1,7 +1,6 @@
 @use "__config" as *;
 
 .main {
-   --sv-vertex: 60%;
    flex-grow: 1;
    padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
    padding-bottom: var(--sz-main-padding);

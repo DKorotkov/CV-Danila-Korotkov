@@ -33,6 +33,7 @@
       border: rem(2) solid var(--color);
       padding: em(10,32) em(15, 32);
       padding-bottom: em(8, 32);
+      transition: all 0.3s ease;
 
       @media (min-width: 70em) {
          --color: var(--clr-white);
@@ -46,8 +47,18 @@
    &__logo:where(:hover, :focus-visible) {
       text-decoration: none;
    }
+
+   &__logo--active {
+      @media (min-width: 50em) {
+         position: relative;  
+         z-index: 20;
+         color: var(--clr-primary);
+         border-color: var(--clr-primary);
+
+      }
+   }
    
    &__nav {
-      display: none;
+      
    }
 }

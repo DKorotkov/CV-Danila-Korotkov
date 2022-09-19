@@ -1,5 +1,5 @@
 //----------------------------ШРИФТЫ------------------------------------------------------------
-var mainFont = new FontFaceObserver("Fira Sans");
+var mainFont = new FontFaceObserver("LyuLin");
 // var Raleway = new FontFaceObserver("Raleway");
 
 // // Загружаем все шрифты сразу Здесь лучше загружать шрифты, которые не являются основными, но находяться в верхней части страницы.

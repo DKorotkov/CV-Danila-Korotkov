@@ -13,7 +13,7 @@ a:where(.btn) {
 
 .btn {
    padding: em(8,16) em(16,16);
-   text-transform: uppercase;
+   // text-transform: uppercase;
    border-radius: em(30,16);
    color: var(--clr-white);
    background-color: var(--clr-primary);

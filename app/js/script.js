@@ -2,7 +2,7 @@
    ("use strict");
 
    // -------------Загрузка шрифтов через скрипт------------
-   // include('modules/_fonts.js')
+   @@include('modules/_fonts.js')
    // ------------------------------------------------------
 
    // --------------------------------Загузка класса Аккардион----------------------------
@@ -30,41 +30,37 @@
    // ------------------------------------------------------------------------------------
 
    // --------------------------------Загрузка класса "Галереи"----------------------
-   @@include('modules/_gallery.js')
+   // @@include('modules/_gallery.js')
    // ------------------------------------------------------------------------------------
 
    // -----------Модальное окно-----------------------------
-   m = new ModalDK({
-      selector: "#modal",
-      openBtnsSelector: ['[data-name="modal"]'],
-      focusTrap: true, // Требуется ли перемещаться табом только внутри объекта (default: false)
-      collapseOnFocusOut: false, // Требуется ли закрывать при потери фокуса
-      // dialogFullScreen: false,
+   const humburgerBtn = document.querySelector(".hamburger");
+   const logo = document.querySelector(".header__logo");
+   const mainNav = new ModalDK({
+      selector: ".nav",
+      openBtnsSelector: ['.hamburger'],
+      collapseOnFocusOut: true,
+      onOpen() {
+         humburgerBtn.classList.add("is-active");
+         humburgerBtn.setAttribute("aria-expanded","true");
+         logo.classList.add("header__logo--active");
+      },
+      onClose() {
+         humburgerBtn.classList.remove("is-active");
+         humburgerBtn.setAttribute("aria-expanded", "false");
+         logo.classList.remove("header__logo--active");
+
+      },
    });
    // ------------------------------------------------------
 
    // -----------Галерея------------------------------------
-   g = new GalleryDK({
-   selector: ".gallery", // селектор контейнера, который объединяет все изображения
-   focusTrap: true,
-   collapseOnFocusOut: false,
-});
+   // g = new GalleryDK({
+   // selector: ".gallery", // селектор контейнера, который объединяет все изображения
+   // focusTrap: true,
+   // collapseOnFocusOut: false,
+// });
    // ------------------------------------------------------
 
-   // ------------Font Observer-----------------------------
-   // Загрузка шрифтов через скрипт
-      const font = new FontFaceObserver("LyuLin");
-      const html = document.documentElement;
-   font.load().then(function () {
-            html.classList.remove("fonts-loading");
-            html.classList.add("fonts-loaded");
-            sessionStorage.fontsLoaded = true;
-         })
-         .catch(function () {
-            html.classList.remove("fonts-loading");
-            html.classList.add("fonts-failed");
-            sessionStorage.fontsLoaded = false;
-         });
-   // ------------------------------------------------------
-
+  
 })();

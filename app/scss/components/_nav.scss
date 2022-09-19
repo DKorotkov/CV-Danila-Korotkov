@@ -1,0 +1,113 @@
+@use "__config" as *;
+
+.nav {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   width: 80%;
+
+   @media (min-width: 50em) {
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: 0;
+      width: 50%;
+      width: 100%;
+   }
+
+   
+
+   &[closing] &__content {
+      animation: slide-from-left 500ms forwards;
+      @media (min-width: 50em) {
+         animation: slide-up 500ms forwards;
+      }
+   }
+
+   &[closing] &__overlay {
+      animation: fade-out 500ms forwards;
+   }
+   
+   &:not([closing]) &__content {
+      animation: slide-to-left 500ms forwards;
+      @media (min-width: 50em) {
+         animation: slide-down 500ms forwards;
+      }
+   }
+
+   &__content {
+      background-color: var(--clr-white);
+      height: 100%;
+      padding-block: var(--sz-main-padding);
+      padding-top: calc(var(--sz-navigation) + var(--sz-main-padding)*2);
+      font-weight: var(--fw-bold);
+      @include rfs(32px);
+      @media (min-width: 50em) {
+         padding-left: var(--sz-aside-width);
+      }
+     
+   }
+
+   &__box {
+      @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+         display: flex;
+         flex-wrap: wrap;
+      }
+   }
+
+   &__item {
+      display: flex;
+      counter-increment: my-counter;
+      align-items: center;
+      gap: em(20,52);
+   }
+
+   &__item::before {
+      content: "0" counter(my-counter);
+      padding-left: var(--sz-main-padding);
+   }
+
+   &__link {
+      display: inline-block;
+      position: relative;
+      text-transform: uppercase;
+      width: 100%;
+      padding: em(40,52) var(--sz-main-padding) em(40,52) 0;
+      @media (min-width: 50em) {
+         width: auto;
+      }
+   }
+
+   &__link::before {
+      display: block;
+      position: absolute;
+      // bottom: 0.8em;
+      // left: calc(var(--sz-main-padding) * -1);
+      content: '';
+      width: calc(100% - var(--sz-main-padding));
+      height: rem(32);
+      background-color: var(--clr-primary);
+      opacity: 0.5;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in;
+   }
+
+
+   &__link:where(:hover, :focus-visible) {
+      text-decoration: none;
+      transition-timing-function: ease-out;
+   }
+
+   &__link:where(:hover, :focus-visible)::before {
+      transform-origin: left;
+      transform: scaleX(1);
+   }
+   
+
+   &__overlay {
+      animation: fade-in 500ms forwards;
+   }
+
+}
