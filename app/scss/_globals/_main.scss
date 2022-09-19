@@ -4,7 +4,7 @@
    --sv-vertex: 60%;
    flex-grow: 1;
    padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
-  
+   padding-bottom: var(--sz-main-padding);
 
    @media (min-width: 70rem) {
       padding-block:  var(--sz-main-padding);
@@ -61,7 +61,8 @@
    }
 
    &__body {
-     
+     display: grid;
+     gap: rem(10);
    }
 
    &__vertex {

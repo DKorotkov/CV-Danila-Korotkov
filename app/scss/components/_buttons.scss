@@ -12,19 +12,34 @@ a:where(.btn) {
 }
 
 .btn {
-   padding: rem(8) rem(16);
+   padding: em(8,16) em(16,16);
    text-transform: uppercase;
-   border-radius: rem(30);
-   border: rem(2) solid var(--clr-black);
+   border-radius: em(30,16);
+   color: var(--clr-white);
+   background-color: var(--clr-primary);
+   border: em(2,16) solid var(--clr-primary);
    font-weight: var(--fw-bold);
    letter-spacing: rem(2);
+   transition: all .3s ease;
 
    &:where(:hover, :focus-visible) {
-      
+      filter: brightness(0.9);
    }
 
    &:disabled {
       border-color: var(--clr-silver);
       color: var(--clr-silver);
+   }
+
+   &--trns {
+      border-color: var(--clr-black);
+      color: var(--clr-black);
+      background-color: transparent;
+   }
+
+   &--trns:where(:hover, :focus-visible) {
+      border-color: var(--clr-primary);
+      color: var(--clr-white);
+      background-color: var(--clr-primary);
    }
 }

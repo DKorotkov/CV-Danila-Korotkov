@@ -1,5 +1,48 @@
 @use "__config" as *;
 
 .about {
-   
+   --size-add-padding: var(--space-md);
+   &__header {
+      width: min-content;
+      font-weight: var(--fw-bold);
+   }
+
+   &__header-accent {
+      color: var(--clr-primary);
+      font-style: normal;
+   }
+
+   &__job {
+      font-weight: var(--fw-semi-bold);
+   }
+
+   &__inforamtion {
+      padding-top: var(--size-add-padding);
+   }
+
+   &__fast-links {
+      display: flex;
+      gap: rem(16);
+      padding-top: var(--size-add-padding);
+   }
+
+   &__stack {
+      padding-top: var(--size-add-padding);
+   }
+
+   &__stack-list {
+      display: flex;
+      gap: rem(10);
+      padding-top: var(--space-sm);
+   }
+
+   &__stack-item {
+      width: rem(48);
+      height: rem(48);
+   }
+
+   &__stack-icon {
+      width: 100%;
+      aspect-ratio: 1;
+   }
 }
