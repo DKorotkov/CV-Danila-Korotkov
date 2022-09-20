@@ -10,6 +10,10 @@
       background-color: transparent;
    }
 
+   &:has(.nav[aria-hidden="false"]) {
+      z-index: 50;
+   }
+
    &__conatiner {
       display: flex;
       justify-content: space-between;
@@ -33,7 +37,8 @@
       border: rem(2) solid var(--color);
       padding: em(10,32) em(15, 32);
       padding-bottom: em(8, 32);
-      transition: all 0.3s ease;
+      z-index: 20;
+      transition: all .5s ease;
 
       @media (min-width: 70em) {
          --color: var(--clr-white);
@@ -51,7 +56,6 @@
    &__logo--active {
       @media (min-width: 50em) {
          position: relative;  
-         z-index: 20;
          color: var(--clr-primary);
          border-color: var(--clr-primary);
 

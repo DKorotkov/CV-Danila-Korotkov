@@ -1,0 +1,35 @@
+@use "__config" as *;
+
+.resume {
+
+
+   &__tablist {
+      display: flex;
+      gap: var(--space-md);
+   }
+
+   &__tablist::before {
+      content: '/';
+   }
+
+   &__tabitem {
+      cursor: pointer;
+   }
+   
+   &__tabitem:first-child {
+      order: -1;
+   }
+
+   &__tablink {
+      position: relative;
+   }
+
+   &__tablink::before {
+      // 
+   }
+
+   &__tabitem[aria-selected="true"] > &__tablink {
+      // color: var(--clr-primary);
+   }
+
+}

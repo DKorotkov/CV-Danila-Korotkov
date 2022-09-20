@@ -1,0 +1,50 @@
+@use "__config" as *;
+
+:where(.text-decration)::before {
+   position: absolute;
+   top: 20%;
+   left: 7%;
+   content: '';
+   width: 0;
+   height: 80%;
+   background-color: var(--clr-primary);
+   z-index: -1;
+   opacity: .5;
+   transform-origin: right;
+   transform: skewX(-10deg) scaleX(0);
+   transition: transform 0.3s ease-in;
+}
+
+:where(.text-decration):where(:hover, :focus-visible)::before {
+// :where(:focus-visible) > .text-decration::before {
+   transform-origin: left;
+   width: 100%;
+   transform: skewX(-10deg) scaleX(1);
+}
+
+:where(.text-decration):where(:hover, :focus-visible) {
+      text-decoration: none;
+      transition-timing-function: ease-out;
+   }
+
+:where(.text-decration):where(:focus-visible) {
+      outline: rem(0.1) solid var(--clr-primary)!important; 
+
+}
+
+:where(.text-decration):where([aria-current="page"])::after,
+:where([aria-selected="true"]) > .text-decration::after {
+   position: absolute;
+   bottom: 5px;
+   left: 0;
+   content: '';
+   width: 100%;
+   height: rem(1);
+   background-color: var(--clr-primary);
+   animation: line-opacity .6s ease;
+}
+
+@keyframes line-opacity {
+   0%, 50% {opacity: 0;}
+   100% {opacity: 1;}
+}

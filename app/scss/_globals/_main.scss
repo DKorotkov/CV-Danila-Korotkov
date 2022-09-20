@@ -2,12 +2,9 @@
 
 .main {
    flex-grow: 1;
-   padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
-   padding-bottom: var(--sz-main-padding);
+   
 
-   @media (min-width: 70rem) {
-      padding-block:  var(--sz-main-padding);
-   }
+   
 
    &:has(&__vertex) {
       @media (min-width: 70rem) {
@@ -16,9 +13,21 @@
    }
 
    &:has(&__vertex) &__container {
-     @media (min-width: 70em) {
-      grid-template-columns: calc(var(--sz-aside-width) / 2) var(--sz-aside-width) 1fr;
-     }
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+      padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
+
+      @media (min-width: 50em) {
+         padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3 + var(--space-lg));
+         flex-direction: row;
+      }
+
+      @media (min-width: 70em) {
+         display: grid;
+         padding-top: 0;
+         grid-template-columns: calc(var(--sz-aside-width) / 2) var(--sz-aside-width) 1fr;
+      }
    }
 
    &:has(&__vertex) &__content {
@@ -36,16 +45,28 @@
    }
    
    &__header {
+         position: relative;
+
+      left: calc(var(--sz-main-padding));
       text-transform: uppercase;
       font-weight: var(--fw-bold);
-      padding-top: calc(var(--fs-logo) / 2);
       justify-self: flex-start;
+      width: min-content;
+      padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
       @include rfs(42px);
+      @media (min-width: 70em) {
+         left: calc(var(--sz-aside-width) + var(--sz-main-padding));
+         z-index: 10;
+         padding-top: calc(var(--sz-main-padding) + (var(--fs-logo)/2)/2);
+      }
    }
    
    &__container {
+      
+      padding-bottom: var(--sz-main-padding);
       @media (min-width: 70em) {
          display: grid;
+         padding-block:  var(--sz-main-padding);
          grid-template-columns: var(--sz-aside-width) 1fr;
       }
    }
@@ -65,8 +86,14 @@
    }
 
    &__vertex {
-      
+      order: 1;
+
+      @media (min-width: 50em) {
+          order: 0;
+      }
+
       @media (min-width: 70em) {
+        
          grid-column-start: 2;
          max-height: calc(100vh - var(--sz-main-padding) * 2);
          align-self: center;

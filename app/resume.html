@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчкиа Данилы Короткова ", "keywords": "Ключевые слова", "title": " Резюме ", "site_name": " Данила Коротков CV ", "socials": { "autor": " Данила Коротков ", "copyright": " Данила Коротков ", "adress":
+   "danila.korotkov@gmail.com", "image": "img/dk.jpg", "link": "/index.html", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
+   <body class="body">
+      @@include('html/_header.html')
+      <aside class="aside"></aside>
+      <main class="main" id="main-content">
+         <h1 class="main__header">
+            <ul class="resume__tablist">
+               <li class="resume__tabitem"><a class="resume__tablink text-decration" href="#experience">Работа</a></li>
+               <li class="resume__tabitem"><a class="resume__tablink text-decration" href="#education">Образование</a></li>
+            </ul>
+         </h1>
+         <div class="container main__container">
+            <div class="resume main__content">
+               <div class="main__body">
+                  <div class="resume__tabpanel" id="education">education</div>
+                  <div class="resume__tabpanel" id="experience">experience</div>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('html/_footer.html') @@include('html/_scripts.html')
+   </body>
+</html>
+
+<!-- 
+   в модальном окне управляется стрелками, необходимо исправить
+   добавить tabs js в html 
+
+ -->

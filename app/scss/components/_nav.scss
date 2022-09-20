@@ -81,30 +81,22 @@
 
    &__link::before {
       display: block;
-      position: absolute;
-      // bottom: 0.8em;
-      // left: calc(var(--sz-main-padding) * -1);
-      content: '';
+      left: -2ch;
+      
       width: calc(100% - var(--sz-main-padding));
       height: rem(32);
-      background-color: var(--clr-primary);
-      opacity: 0.5;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in;
+      @media (min-width: 50em) {
+         top: 37%;
+         width: calc(100% + 2ch);
+      }
    }
 
-
-   &__link:where(:hover, :focus-visible) {
-      text-decoration: none;
-      transition-timing-function: ease-out;
-   }
-
-   &__link:where(:hover, :focus-visible)::before {
-      transform-origin: left;
-      transform: scaleX(1);
+   &__link::after {
+      bottom: 25%;
+      
    }
    
+ 
 
    &__overlay {
       animation: fade-in 500ms forwards;
