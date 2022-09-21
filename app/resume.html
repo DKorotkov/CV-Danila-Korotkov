@@ -6,17 +6,45 @@
       @@include('html/_header.html')
       <aside class="aside"></aside>
       <main class="main" id="main-content">
-         <h1 class="main__header">
-            <ul class="resume__tablist">
-               <li class="resume__tabitem"><a class="resume__tablink text-decration" href="#experience">Работа</a></li>
-               <li class="resume__tabitem"><a class="resume__tablink text-decration" href="#education">Образование</a></li>
-            </ul>
-         </h1>
+         <h1 class="clipped main__header">Резюме</h1>
          <div class="container main__container">
             <div class="resume main__content">
                <div class="main__body">
-                  <div class="resume__tabpanel" id="education">education</div>
-                  <div class="resume__tabpanel" id="experience">experience</div>
+                  <div class="resume__panel">
+                     <h2 class="resume__header">Образование</h2>
+                     <ul class="resume__list">
+                        <li class="resume__item box-shadow">
+                           <h3 class="resume__profession">Техник</h3>
+                           <p class="resume__place">Санкт-Петербургский Колледж Информационных Технологий</p>
+                           <span class="resume__years">2001 - 2005</span>
+                        </li>
+                        <li class="resume__item box-shadow">
+                           <h3 class="resume__profession">Инженер</h3>
+                           <p class="resume__place">Санкт-Петербургский Государственный Университет Телекоммуникаций им. проф. Бонч-Бруевича</p>
+                           <span class="resume__years">2005 - 2010</span>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="resume__panel">
+                     <h2 class="resume__header">Работа</h2>
+                     <ul class="resume__list">
+                        <li class="resume__item box-shadow">
+                           <h3 class="resume__profession">Техник</h3>
+                           <p class="resume__place">ФГУП Почта России</p>
+                           <span class="resume__years">2010 - 2012</span>
+                        </li>
+                        <li class="resume__item box-shadow">
+                           <h3 class="resume__profession">Электромеханик</h3>
+                           <p class="resume__place">Петербургский Метрополитен</p>
+                           <span class="resume__years">2012 - 2016</span>
+                        </li>
+                        <li class="resume__item box-shadow">
+                           <h3 class="resume__profession">Старший электромеханик</h3>
+                           <p class="resume__place">Петербургский Метрополитен</p>
+                           <span class="resume__years">2016 - по н.в.</span>
+                        </li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
@@ -27,6 +55,4 @@
 
 <!-- 
    в модальном окне управляется стрелками, необходимо исправить
-   добавить tabs js в html 
-
  -->

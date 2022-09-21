@@ -1,35 +1,43 @@
 @use "__config" as *;
-
 .resume {
 
+   &__header {
+      padding-bottom: 0.5em;
+   }
 
-   &__tablist {
+   &__panel {
+   }
+
+   &__list {
       display: flex;
-      gap: var(--space-md);
+      gap: rem(20);
+      padding-bottom: rem(30);
+      flex-wrap: wrap;
+      @media (min-width: 70em) {
+         gap: rem(50);
+      }
    }
 
-   &__tablist::before {
-      content: '/';
+   &__item {
+      display: grid;
+      flex-basis: rem(300);
+      padding: rem(20);
+      transition: box-shadow .3s ease;
+      gap: rem(3);
    }
 
-   &__tabitem {
-      cursor: pointer;
-   }
-   
-   &__tabitem:first-child {
-      order: -1;
+   &__item:not(:hover, :focus-visible) {
+      box-shadow: none;
    }
 
-   &__tablink {
-      position: relative;
+   &__profession {
+      padding-bottom: em(7,20);
+      @include rfs(20px);
    }
 
-   &__tablink::before {
-      // 
+   &__place {
    }
 
-   &__tabitem[aria-selected="true"] > &__tablink {
-      // color: var(--clr-primary);
+   &__years {
    }
-
 }

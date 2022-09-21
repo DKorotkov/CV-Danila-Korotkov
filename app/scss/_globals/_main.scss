@@ -60,6 +60,14 @@
          padding-top: calc(var(--sz-main-padding) + (var(--fs-logo)/2)/2);
       }
    }
+
+   &__header:is(.clipped) ~ &__container {
+      padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
+
+      @media (min-width: 70em) {
+         padding-top: var(--sz-main-padding);
+      }
+   }
    
    &__container {
       
