@@ -47,15 +47,23 @@
    &__header {
          position: relative;
 
-      left: calc(var(--sz-main-padding));
+      // left: calc(var(--sz-main-padding));
       text-transform: uppercase;
       font-weight: var(--fw-bold);
       justify-self: flex-start;
       width: min-content;
-      padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
-      @include rfs(42px);
+      padding-bottom: 0.5em;
+      // padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
+      // @include rfs(42px);
+
+      @media (min-width: 50em) {
+         // left: 0;
+         padding-top: 0;
+
+      }
+
       @media (min-width: 70em) {
-         left: calc(var(--sz-aside-width) + var(--sz-main-padding));
+         // left: calc(var(--sz-aside-width) + var(--sz-main-padding));
          z-index: 10;
          padding-top: calc(var(--sz-main-padding) + (var(--fs-logo)/2)/2);
       }

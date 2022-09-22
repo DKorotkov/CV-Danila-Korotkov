@@ -3,6 +3,7 @@
 
    &__header {
       padding-bottom: 0.5em;
+      text-transform: uppercase;
    }
 
    &__panel {
@@ -18,26 +19,4 @@
       }
    }
 
-   &__item {
-      display: grid;
-      flex-basis: rem(300);
-      padding: rem(20);
-      transition: box-shadow .3s ease;
-      gap: rem(3);
-   }
-
-   &__item:not(:hover, :focus-visible) {
-      box-shadow: none;
-   }
-
-   &__profession {
-      padding-bottom: em(7,20);
-      @include rfs(20px);
-   }
-
-   &__place {
-   }
-
-   &__years {
-   }
 }

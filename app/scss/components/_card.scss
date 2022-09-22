@@ -1,0 +1,18 @@
+@use "__config" as *;
+
+.card {
+   display: grid;
+   flex-basis: rem(300);
+   padding: rem(20);
+   transition: box-shadow .3s ease;
+   gap: rem(3);
+
+   &:not(:hover, :focus-visible) {
+      box-shadow: none;
+   }
+
+   &__header {
+      padding-bottom: em(7,20);
+      @include rfs(20px);
+   }
+}

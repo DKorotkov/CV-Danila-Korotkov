@@ -29,6 +29,7 @@ a:where(.btn) {
    &:disabled {
       border-color: var(--clr-silver);
       color: var(--clr-silver);
+      cursor: no-drop;
    }
 
    &--trns {

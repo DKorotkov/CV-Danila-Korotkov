@@ -49,3 +49,55 @@
    from {box-shadow: 0 0 0 100vw  var( --backdrop-clr);}
    to {box-shadow: 0 0 0 100vw  transparent;}
 }
+
+@keyframes AnimateBG { 
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+@keyframes msg-squish {
+   0% {
+      display: block;
+      right: 0;
+      left: 0;
+      inset: 0;
+      scale: 1;
+   }
+   50%, 100% {
+      right: 44%;
+      left: 44%;
+   }
+   60% {
+      
+      scale: 0.9;
+   }
+   75% {
+     
+      scale: 2.5;
+   }
+   100% {
+     
+      scale: 1.8;
+   }
+}
+
+@keyframes msg-inner-ok {
+   from {
+    stroke-dashoffset: 19;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes msg-inner-error {
+   from {
+      fill: transparent;
+      stroke-dashoffset: 216;
+  }
+  to {
+    fill: var(--clr-wild-sand);
+    stroke-dashoffset: 0;
+  }
+}

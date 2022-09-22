@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчкиа Данилы Короткова ", "keywords": "Ключевые слова", "title": " Обо мне ", "site_name": " Данила Коротков CV ", "socials": { "autor": " Данила Коротков ", "copyright": " Данила Коротков ", "adress":
+   "danila.korotkov@gmail.com", "image": "img/dk.jpg", "link": "/index.html", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
+   <body class="body">
+      @@include('html/_header.html')
+      <aside class="aside"></aside>
+      <main class="main contacts" id="main-content">
+         <div class="container main__container">
+            <div class="main__vertex contacts__vertex">
+               <form class="form box-shadow" id="form">
+                  <h2 class="form__header">Отправить сообщение</h2>
+                  <label class="form__label" for="input-name">
+                     <input class="form__input" type="text" name="name" id="input-name" required />
+                     <span class="form__label-text">Имя</span>
+                  </label>
+                  <label class="form__label" for="input-email">
+                     <input class="form__input" type="email" name="email" id="input-email" required />
+                     <span class="form__label-text">Email</span>
+                  </label>
+                  <label class="form__label form__label--erea" for="input-meassage">
+                     <textarea class="form__input form__textarea" name="message" id="input-meassage"></textarea>
+                     <span class="form__label-text">Сообщение</span>
+                  </label>
+                  <button class="btn form__btn" id="btnSendMail" type="button">
+                     <span class="msg__text">Отправить</span>
+                     <div class="msg__inner">
+                        <div class="msg__ok" title="Сообщение отправлено">
+                           <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.33334 12.7143L9.56341 17L18.6667 7" stroke-linecap="round" /></svg>
+                        </div>
+                        <div class="msg__error" title="Ошибка при отправке сообщения">
+                           <?xml version="1.0" ?><svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M19,37.44A18.44,18.44,0,1,1,37.44,19,18.461,18.461,0,0,1,19,37.44ZM19,3.06A15.94,15.94,0,1,0,34.94,19,15.958,15.958,0,0,0,19,3.06Z" />
+                              <path d="M17.122,26.242a1.878,1.878 0 1,0 3.756,0a1.878,1.878 0 1,0 -3.756,0" />
+                              <path d="M18.969,21.569h0a1.2,1.2,0,0,1-1.2-1.145l-.425-8.883A1.652,1.652,0,0,1,19,9.82h0a1.652,1.652,0,0,1,1.65,1.731l-.487,8.881A1.2,1.2,0,0,1,18.969,21.569Z" />
+                           </svg>
+                        </div>
+                     </div>
+                  </button>
+               </form>
+            </div>
+            <div class="main__content">
+               <h1 class="main__header">Контакты</h1>
+               <div class="main__body contacts__body">
+                  <ul class="contacts__list" role="list">
+                     <li class="card box-shadow" role="listitem">
+                        <h3 class="card__header">Телефон</h3>
+                        <a href="tel:+79213431395">8 (921) 343-1395</a>
+                     </li>
+                     <li class="card box-shadow" role="listitem">
+                        <h3 class="card__header">Email</h3>
+                        <a href="mailto:danila.korotkov@gmail.com">danila.korotkov@gmail.com</a>
+                     </li>
+                     <li class="card box-shadow" role="listitem">
+                        <h3 class="card__header">Адрес</h3>
+                        <span>Санкт-Петербург, м. Проспект Славы</span>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('html/_footer.html') @@include('html/_scripts.html')
+   </body>
+</html>

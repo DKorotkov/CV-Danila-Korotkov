@@ -1,0 +1,34 @@
+@use "__config" as *;
+
+.contacts {
+
+   &__vertex {
+      display: grid;
+      align-self: stretch!important;
+      align-items: center;
+     
+
+      @media (min-width: 50em) {
+         min-width: rem(350);
+      }
+
+      @media (min-width: 70em) {
+         margin-top: var(--sz-main-padding);
+         min-width: auto;
+          z-index: 20;
+      }
+   }
+
+   &__body {
+      margin-block: 0!important;
+   }
+
+   &__list {
+      display: grid;
+      gap: rem(30);
+      
+      @media (min-width: 70em) {
+         gap: rem(15);
+      }
+   }
+}

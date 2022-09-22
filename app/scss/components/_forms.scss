@@ -1,13 +1,52 @@
 @use "__config" as *;
 
 .form {
-   //----удалить
-   display: grid;
-   gap: 2rem;
-   //-----------
+   display: flex;
+   flex-direction: column;
+   background-color: var(--clr-mine-shaft);
+   color: var(--clr-wild-sand);
+   padding: var(--space-xl) var(--sz-main-padding);
+   height: 100%;
+   gap: rem(40);
+   max-height: rem(650);
+
+   &__header {
+      @include rfs(26px);
+   }
+
+   &__label {
+      position: relative;
+   }
+
+   &__label-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all .3s ease;
+   }
+
+   &__input:where(:focus, :focus-visible, .form__input--not-empty) ~ &__label-text {
+      top: calc(-1 * rem(20));
+      @include rfs(14px);
+   }
+
+   &__label--erea {
+      flex-grow: 1;
+   }
+
+   &__textarea {
+      resize: none; 
+      height: 100%;
+      min-height: 25ch;
+   }
 
    &__input {
-      
+      display: inline-block;
+      border: none;
+      background-color: transparent;
+      color: var(--clr-silver);
+      border-bottom: rem(1) solid var(--clr-silver);
+      width: 100%;
    }
 
    &__input:where(:not([type="checkbox"], [type="radio"])) {
@@ -15,9 +54,7 @@
    }
 
    &__input:where(:focus, :focus-visible) {
-      //----удалить
       border-color: var(--clr-primary);
-      //-----------
    }
 
    &__input:disabled {
@@ -29,12 +66,22 @@
    }
    
    &__input--invalid {
-      
+      border-color: var(--clr-error);
    }
 
    &__error {
-      //----удалить
-         color: var(--clr-error);
-      //-----------
+      color: var(--clr-error);
+      opacity: 0;
+      transition: all 0.3s ease;
+      @include rfs(14px);
    }
+
+   &__error:not(:empty) {
+      opacity: 1;
+   }
+
+   &__btn {
+      height: rem(40);
+   }
+
 }

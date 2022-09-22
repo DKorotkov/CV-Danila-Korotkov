@@ -65,7 +65,7 @@
    <!-- Ссылка на изображение -->
    <meta name="twitter:image" content="img/dk.jpg" />
 
-   <link rel="stylesheet" href="css/style.min.css?_v=20220921092904" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20220922132104" />
 
    <!-- Здесь загружается иконочный шрифт, если иконки используються в верхней части страницы -->
    <!-- <link rel="preload" href="/fonts/fontello.woff" as="font" /> -->
@@ -166,22 +166,27 @@
             <dd class="contact__definition">
                <ul class="contact__soicals">
                   <li class="contact__soicals-item">
-                     <a href="https://github.com/DKorotkov" aria-label="Профиль на GitHub">
+                     <a href="https://github.com/DKorotkov" aria-label="Профиль на GitHub" target="_blank">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#github"></use></svg>
                      </a>
                   </li>
                   <li class="contact__soicals-item">
-                     <a href="https://instagram.com/doubleddan" aria-label="Профиль в instagram">
+                     <a href="https://danila-korotkov.gitbook.io/front-end-patterns/" aria-label="Профиль на GitBook" target="_blank">
+                        <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#gitbook"></use></svg>
+                     </a>
+                  </li>
+                  <li class="contact__soicals-item">
+                     <a href="https://instagram.com/doubleddan" aria-label="Профиль в instagram" target="_blank">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#instagram"></use></svg>
                      </a>
                   </li>
                   <li class="contact__soicals-item">
-                     <a href="https://wa.me/79213431395" aria-label="Связаться через whatsapp">
+                     <a href="https://wa.me/79213431395" aria-label="Связаться через whatsapp" target="_blank">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#whatsapp"></use></svg>
                      </a>
                   </li>
                   <li class="contact__soicals-item">
-                     <a href="https://telegram.me/Korotkov_D" aria-label="Связаться через telegram">
+                     <a href="https://telegram.me/Korotkov_D" aria-label="Связаться через telegram" target="_blank">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#telegram"></use></svg>
                      </a>
                   </li>
@@ -192,14 +197,21 @@
    </div>
 </footer>
  <!-- js для загрухки шрифтов по времени, событию или из кэша -->
-<script src="js/fontfaceobserver.standalone.min.js?_v=20220921092904"></script>
+<script src="js/fontfaceobserver.standalone.min.js?_v=20220922132104"></script>
 <!-- ленивая загрузка изображений -->
-<!-- <script defer src="js/lazyload.min.js?_v=20220921092904"></script> -->
-<!-- <script src="js/ls.bgset.js?_v=20220921092904"></script> -->
+<!-- <script defer src="js/lazyload.min.js?_v=20220922132104"></script> -->
+<!-- <script src="js/ls.bgset.js?_v=20220922132104"></script> -->
 <!-- Скрипт полифил для корректной работы не стадартного фокуса (focus-visible)  -->
-<script src="js/focus-visible.min.js?_v=20220921092904"></script>
+<script src="js/focus-visible.min.js?_v=20220922132104"></script>
+<script src="https://smtpjs.com/v3/smtp.js?_v=20220922132104"></script>
 
-<script src="js/script.min.js?_v=20220921092904"></script>
+<script src="js/script.min.js?_v=20220922132104"></script>
 
    </body>
 </html>
+
+<!-- 
+   в модальном окне управляется стрелками, необходимо исправить
+   поменять шрифт и уменьшить размерз заголовков
+   доделать отпаврку почты
+ -->
