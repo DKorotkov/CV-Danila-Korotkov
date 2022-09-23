@@ -63,6 +63,7 @@
    // collapseOnFocusOut: false,
 // });
    // ------------------------------------------------------
+
    // --------------Отправка почты--------------------------
    // 06cc9a6d-ae50-4dfb-ac79-1ec7f4823816 
    const btnSendMail = document.querySelector('#btnSendMail');
@@ -114,7 +115,74 @@
    }
 
     if (btnSendMail) btnSendMail.addEventListener("click", (e)=> sendMail(e));
-      // ------------------------------------------------------
+   // ------------------------------------------------------
+
+   // --------------Загрузка портфолио----------------------
+   const portfolioList = document.querySelector(".portfolio__list");
+   const template = document.querySelector('#portfolioItemColne');
+   if (portfolioList) {
+      
+      readFile("./files/portfolio/data.json", function(text){
+         data = JSON.parse(text);
+         data.forEach((el, i) => { 
+            addPortfolioItem(el);
+         });
+      });
+   }
+
+   function readFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+      rawFile.send(null);
+   }
+
+   function addPortfolioItem(el){
+      const protfolioDate = new Date(el.createDate);
+
+      const clone = template.content.cloneNode(true);
+      const portfolioItem = clone.querySelector(".portfolio__item");
+      const portfolioImg = portfolioItem.querySelector(".portfolio__img");
+      const portfolioDate = portfolioItem.querySelector(".portfolio__date");
+      const portfolioName = portfolioItem.querySelector(".portfolio__name");
+      const portfolioContent = portfolioItem.querySelector(".portfolio__content");
+      const portfolioLink = portfolioItem.querySelector(".portfolio__link");
+
+      
+      portfolioItem.setAttribute("data-create-date", el.createDate)
+      portfolioItem.setAttribute("data-type", el.type)
+      portfolioItem.setAttribute("role", "listitem")
+
+         
+      portfolioImg.src = el.img;
+      portfolioDate.setAttribute("datetime", el.createDate);
+      portfolioDate.innerHTML = getDateToItem(protfolioDate)
+      portfolioName.innerHTML = el.name
+      portfolioContent.innerHTML = el.content
+      portfolioLink.href = el.link
+
+      portfolioItem.appendChild(portfolioImg)
+      portfolioItem.appendChild(portfolioDate)
+      portfolioItem.appendChild(portfolioName)
+      portfolioItem.appendChild(portfolioContent)
+      portfolioItem.appendChild(portfolioLink)
+
+      portfolioList.appendChild(portfolioItem)
+   }
+
+   function getDateToItem(date) {
+      // const monthNames = ["January", "February", "March", "April", "May", "June",
+      // "July", "August", "September", "October", "November", "December"
+      // ];
+      const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+      return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+   }
+   // ------------------------------------------------------
      
       
    })();

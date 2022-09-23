@@ -47,7 +47,7 @@
    &__header {
          position: relative;
 
-      // left: calc(var(--sz-main-padding));
+      
       text-transform: uppercase;
       font-weight: var(--fw-bold);
       justify-self: flex-start;
@@ -66,6 +66,15 @@
          // left: calc(var(--sz-aside-width) + var(--sz-main-padding));
          z-index: 10;
          padding-top: calc(var(--sz-main-padding) + (var(--fs-logo)/2)/2);
+      }
+   }
+
+   &:not(:has(&__vertex)) &__header {
+      left: var(--sz-main-padding);
+      padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
+      @media (min-width: 70em) {
+         left: calc(var(--sz-main-padding) + var(--sz-aside-width));
+         padding-top: var(--sz-main-padding);
       }
    }
 

@@ -1,0 +1,85 @@
+@use "__config" as *;
+
+.portfolio {
+   --item-padding: var(--space-lg);
+
+   &__list {
+      display: grid;
+      gap: var(--sz-main-padding);
+      @media (min-width: 50em) {
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   &__item {
+      display: grid;
+      position: relative;
+      aspect-ratio: 1;
+      padding: var(--item-padding);
+      color: var(--clr-white);
+      gap: var(--space-xs);
+      place-content: end;
+   }
+
+   &__item::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      background-color: var(--clr-primary);
+      opacity: 0;
+      z-index: 1;
+      transition: opacity .3s ease;
+   }
+
+   &__item:where(:hover, :focus-visible, :focus-within)::before {
+      opacity: 0.9;
+      z-index: -1;
+   }
+
+   &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      
+   }
+
+   &__item:where(:hover, :focus-visible, :focus-within) &__img {
+      z-index: -2;
+   }
+
+   &__date {
+      @include rfs(12px);
+      
+   }
+
+   &__name {
+      font-weight: var(--fw-bold);
+      @include rfs(32px);
+   }
+
+   &__content {
+      padding-right: 20%;
+   }
+
+   &__link {
+      position: absolute;
+      right: var(--item-padding);
+      bottom: var(--item-padding);
+      width: 15%;
+      padding: 5%;
+      height: 15%;
+      fill: var(--clr-white);
+      z-index: -1;
+   }
+
+   &__item:where(:hover, :focus-visible, :focus-within) &__link {
+      z-index: 0;
+   }
+
+   &__link-icon {
+      width: 100%;
+      height: 100%;
+   }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчкиа Данилы Короткова ", "keywords": "Ключевые слова", "title": " Резюме ", "site_name": " Данила Коротков CV ", "socials": { "autor": " Данила Коротков ", "copyright": " Данила Коротков ", "adress":
+   "danila.korotkov@gmail.com", "image": "img/dk.jpg", "link": "/index.html", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
+   <body class="body">
+      @@include('html/_header.html')
+      <aside class="aside"></aside>
+      <main class="main" id="main-content">
+         <h1 class="main__header">Портфолио</h1>
+         <div class="container main__container">
+            <div class="portfolio main__content">
+               <div class="main__body">
+                  <ul class="portfolio__list" role="list"></ul>
+               </div>
+            </div>
+         </div>
+         <template id="portfolioItemColne">
+            <li class="portfolio__item" role="listitem">
+               <img class="portfolio__img" src="#" alt="" />
+               <time class="portfolio__date"></time>
+               <span class="portfolio__name"></span>
+               <p class="portfolio__content"></p>
+               <a class="portfolio__link" href="#" title="Открыть проект в новом окне" target="_blank">
+                  <svg class="portfolio__link-icon" role="img"><use xlink:href="img/icons/icons.svg#arrow-right"></use></svg>
+               </a>
+            </li>
+         </template>
+      </main>
+      @@include('html/_footer.html') @@include('html/_scripts.html')
+   </body>
+</html>
