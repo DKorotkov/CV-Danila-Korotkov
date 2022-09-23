@@ -43,7 +43,7 @@
    <!-- Тип контента -->
    <meta property="og:type" content="article" />
    <!-- Заголовок страницы, который будет выводиться в записи социальной сети -->
-   <meta property="og:title" content=" Обо мне " />
+   <meta property="og:title" content=" Резюме " />
    <!-- Описание страницы -->
    <meta property="og:description" content="Сайт портфолио front-end разработчкиа Данилы Короткова " />
    <!-- Ссылка на изображение которое будет публиковаться в записи -->
@@ -59,7 +59,7 @@
    <!-- Имя\Логин автора -->
    <meta name="twitter:site" content=" Данила Коротков " />
    <!-- Название страницы -->
-   <meta name="twitter:title" content=" Обо мне " />
+   <meta name="twitter:title" content=" Резюме " />
    <!-- Описание страницы -->
    <meta name="twitter:description" content="Сайт портфолио front-end разработчкиа Данилы Короткова " />
    <!-- Ссылка на изображение -->
@@ -78,7 +78,7 @@
          html.classList.add("fonts-loaded");
       }
    </script>
-   <title> Данила Коротков CV  |  Обо мне </title>
+   <title> Данила Коротков CV  |  Резюме </title>
 </head>
 
    <body class="body">
@@ -104,49 +104,25 @@
 
       <aside class="aside"></aside>
       <main class="main" id="main-content">
-         <h1 class="clipped main__header">Обо мне</h1>
+         <h1 class="main__header">Портфолио</h1>
          <div class="container main__container">
-            <div class="main__vertex box-shadow">
-               <picture><source srcset="img/dk.webp" type="image/webp"><img src="img/dk.jpg" alt="Фотография Данилы Короткова" /></picture>
-            </div>
-            <div class="about main__content">
+            <div class="portfolio main__content">
                <div class="main__body">
-                  <h2 class="about__header">Данила <em class="about__header-accent">Коротков</em></h2>
-                  <span class="about__job">Front-End разработчик</span>
-                  <p class="about__inforamtion">Привет Мир! Живу в Санкт-Петербурге, люблю веб и верю в лучшее.</p>
-                  <dl class="about__stack">
-                     <dt>Мой основной стэк:</dt>
-                     <dd>
-                        <ul class="about__stack-list">
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label=""><use xlink:href="img/icons/icons-color.svg#html"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label=""><use xlink:href="img/icons/icons-color.svg#js"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label=""><use xlink:href="img/icons/icons-color.svg#sass"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label=""><use xlink:href="img/icons/icons-color.svg#gulp"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label=""><use xlink:href="img/icons/icons-color.svg#wp"></use></svg>
-                           </li>
-                        </ul>
-                     </dd>
-                  </dl>
-                  <ul class="about__fast-links" role="list" aria-label="Быстрые ссылки">
-                     <li class="about__fast-link" role="listitem">
-                        <a class="btn" href="/portfolio.html">портфолио</a>
-                     </li>
-                     <li class="about__fast-link" role="listitem">
-                        <a class="btn btn--trns" href="/resume.html">резюме</a>
-                     </li>
-                  </ul>
+                  <ul class="portfolio__list" role="list"></ul>
                </div>
             </div>
          </div>
+         <template id="portfolioItemColne">
+            <li class="portfolio__item" role="listitem">
+               <picture><source srcset="#" type="image/webp"><img class="portfolio__img" src="#" alt="" /></picture>
+               <time class="portfolio__date"></time>
+               <span class="portfolio__name"></span>
+               <p class="portfolio__content"></p>
+               <a class="portfolio__link" href="#" title="Открыть проект в новом окне" target="_blank">
+                  <svg class="portfolio__link-icon" role="img"><use xlink:href="img/icons/icons.svg#arrow-right"></use></svg>
+               </a>
+            </li>
+         </template>
       </main>
       <footer class="footer">
    <div class="container footer__container">
@@ -209,9 +185,3 @@
 
    </body>
 </html>
-
-<!-- 
-   в модальном окне управляется стрелками, необходимо исправить
-   поменять шрифт и уменьшить размерз заголовков
-   доделать отпаврку почты
- -->
