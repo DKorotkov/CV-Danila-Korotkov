@@ -3,6 +3,10 @@
 .portfolio {
    --item-padding: var(--space-lg);
 
+   &__options {
+      padding-bottom: var(--space-md);
+   }
+
    &__list {
       display: grid;
       gap: var(--sz-main-padding);

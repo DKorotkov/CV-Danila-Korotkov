@@ -1,4 +1,17 @@
 // Для валидации формы на сайте
+
+// Вынести этот модуль ввиде отдельного проекта, вывести на гитхаб с описанием
+
+// -----------Пример работы с кнопкой формы отправки без submit----------------
+// const submitBtns = document.querySelectorAll(".appointment-form__submit");
+// submitBtns.forEach((submitBtn) => {
+//    submitBtn.addEventListener("click", (e) => {
+//       const thisForm = e.currentTarget.closest("form");
+//       if (FormValid.checkValid(thisForm)) {
+//          console.log("Отправляем форму");
+//       }
+//    });
+// });
 class FormValid {
    constructor(options) {
       this.constructorOptions = options;
@@ -29,7 +42,7 @@ class FormValid {
       this.options = Object.assign(defaultOptions, this.constructorOptions);
 
       this.forms = document.querySelectorAll("form");
-      if (!this.forms) console.error("Форма на странице не найдена");
+      if (!this.forms) return;
 
       this.forms.forEach((form) => {
          // form.setAttribute("novalidate", "");
@@ -160,16 +173,3 @@ class FormValid {
 // -----------Проверка валидация формы-------------------
 FormValid.init();
 // ------------------------------------------------------
-
-// Вынести этот модуль ввиде отдельного проекта, вывести на гитхаб с описанием
-
-// -----------Пример работы с кнопкой формы отправки без submit----------------
-// const submitBtns = document.querySelectorAll(".appointment-form__submit");
-// submitBtns.forEach((submitBtn) => {
-//    submitBtn.addEventListener("click", (e) => {
-//       const thisForm = e.currentTarget.closest("form");
-//       if (FormValid.checkValid(thisForm)) {
-//          console.log("Отправляем форму");
-//       }
-//    });
-// });

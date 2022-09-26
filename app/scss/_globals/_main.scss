@@ -65,7 +65,7 @@
       @media (min-width: 70em) {
          // left: calc(var(--sz-aside-width) + var(--sz-main-padding));
          z-index: 10;
-         padding-top: calc(var(--sz-main-padding) + (var(--fs-logo)/2)/2);
+         // padding-top: calc(var(--sz-main-padding) + (var(--fs-logo)/2)/2);
       }
    }
 
@@ -91,7 +91,7 @@
       padding-bottom: var(--sz-main-padding);
       @media (min-width: 70em) {
          display: grid;
-         padding-block:  var(--sz-main-padding);
+         // padding-block:  var(--sz-main-padding);
          grid-template-columns: var(--sz-aside-width) 1fr;
       }
    }

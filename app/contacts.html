@@ -12,18 +12,18 @@
                <form class="form box-shadow" id="form">
                   <h2 class="form__header">Отправить сообщение</h2>
                   <label class="form__label" for="input-name">
-                     <input class="form__input" type="text" name="name" id="input-name" required />
+                     <input class="form__input" type="text" name="name" id="input-name" mozactionhint="next" maxlength="30" required />
                      <span class="form__label-text">Имя</span>
                   </label>
                   <label class="form__label" for="input-email">
-                     <input class="form__input" type="email" name="email" id="input-email" required />
+                     <input class="form__input" type="email" name="email" id="input-email" mozactionhint="next" maxlength="30" required />
                      <span class="form__label-text">Email</span>
                   </label>
                   <label class="form__label form__label--erea" for="input-meassage">
-                     <textarea class="form__input form__textarea" name="message" id="input-meassage"></textarea>
+                     <textarea class="form__input form__textarea" name="message" id="input-meassage" mozactionhint="next" maxlength="150"></textarea>
                      <span class="form__label-text">Сообщение</span>
                   </label>
-                  <button class="btn form__btn" id="btnSendMail" type="button">
+                  <button class="btn form__btn" id="btnSendMail" type="button" mozactionhint="send">
                      <span class="msg__text">Отправить</span>
                      <div class="msg__inner">
                         <div class="msg__ok" title="Сообщение отправлено">

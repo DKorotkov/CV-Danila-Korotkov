@@ -10,6 +10,22 @@
          <div class="container main__container">
             <div class="portfolio main__content">
                <div class="main__body">
+                  <div class="portfolio__options options">
+                     <label class="options__item" for=""></label>
+                     <select multiple class="options__select" name="date">
+                        <option value="new">Сначала новые</option>
+                        <option selected value="old">Сначала старые</option>
+                        <option selected value="random">В случайном порядке</option>
+                     </select>
+                  </div>
+                  <div class="portfolio__options options">
+                     <label class="options__item" for=""></label>
+                     <select class="options__select" name="date">
+                        <option value="new">Сначала новые</option>
+                        <option selected value="old">Сначала старые</option>
+                     </select>
+                  </div>
+
                   <ul class="portfolio__list" role="list"></ul>
                </div>
             </div>
