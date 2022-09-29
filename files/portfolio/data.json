@@ -1,34 +1,37 @@
-[
-   {
-      "name": "Пример чего-либо1",
-      "link": "#",
-      "type": "work",
-      "content": "С другой стороны постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание новых принципов формирования материально-технической и кадровой базы.",
-      "img": "img/portfolio/448964021.jpg",
-      "createDate": "2022-09-21"
+[{
+      "name": "Сайт дизайнерской компании",
+      "link": "https://dkorotkov.github.io/portfolio-design-company/",
+      "type": "portfolio",
+      "content": "Верстка макета компании, которая занимается дизайном помещений",
+      "more_info": "<b>Особенности</b><br>Добавлена мобильная версия, не предусмотренная макетом<br>Добавлена анимация (AOS)<br>Добавлен слайдер (a11y - slider)<br>Добавлена галерея изображений (собственная разработка)<br><br><b>Ресурс</b><br><a href='https://frontend-skills.com/template/0w50AZWvvEjOB26ACGiW' _blank>https://frontend-skills.com/</a>",
+      "img": "img/portfolio/Architecture & Interior - Main Page.png",
+      "createDate": "2022-08-25"
    },
    {
-      "name": "Пример чего-либо2",
-      "link": "#",
+      "name": "Анимация блоков",
+      "link": "https://dkorotkov.github.io/protfolio-imgs-offer-animation/",
       "type": "fun",
-      "content": "С другой стороны постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание новых принципов формирования материально-технической и кадровой базы.",
-      "img": "img/portfolio/448964021.jpg",
-      "createDate": "2022-08-21"
+      "content": "Попытка сделать анимацю блоков, по примеру макета из инстаграм",
+      "more_info": "<b>Особенности</b><br>Использовал clip-path<br><br><b>Ресурс</b><br><a href='https://www.instagram.com/p/CiMyE-LjDSE/?igshid=MDE2OWE1N2Q=' _blank>@zhenya.ninja</a>",
+      "img": "img/portfolio/For Fun - Пример анимации для блока предложений.png",
+      "createDate": "2022-09-15"
    },
    {
-      "name": "Пример чего-либо3",
-      "link": "#",
-      "type": "portfolio",
-      "content": "С другой стороны постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание новых принципов формирования материально-технической и кадровой базы.",
-      "img": "img/portfolio/448964021.jpg",
-      "createDate": "2022-09-21"
+      "name": "Конструктор бургера",
+      "link": "https://dkorotkov.github.io/portfolio-make_your_burger/",
+      "type": "fun",
+      "content": "Верстка макета конструктора бургера",
+      "more_info": "<b>Особенности</b><br>Элементы (ингредиенты) добавялются автоматически из файла json.<br>Каждый из ингредиентов имеет свою стоимость, время приготовления, вес и количество калорий.<br><br><b>Ресурс</b><br><a href='https://frontend-skills.com/template/9mXx4YPAtxTtrGmAR1tO' _blank>https://frontend-skills.com/</a>",
+      "img": "img/portfolio/Make Your Burger - Main Page.png",
+      "createDate": "2022-09-08"
    },
    {
-      "name": "Пример чего-либо4",
-      "link": "#",
-      "type": "portfolio",
-      "content": "С другой стороны постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание новых принципов формирования материально-технической и кадровой базы.",
-      "img": "img/portfolio/448964021.jpg",
-      "createDate": "2022-10-21"
+      "name": "Галерея изображений",
+      "link": "https://dkorotkov.github.io/Ecwid-test-assessment/",
+      "type": "work",
+      "content": "Тестовое задание на должность Fullstack разработчик (PHP, React.js) в команду вебсайта для Эквид",
+      "more_info": "Стояла задача разработать страницу с галереей, которая поддерживает добавление изображений по ссылка или из файла",
+      "img": "img/portfolio/Ecwid test assessment (gallery).png",
+      "createDate": "2021-12-15"
    }
 ]
