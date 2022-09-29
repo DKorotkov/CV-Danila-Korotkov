@@ -1,5 +1,6 @@
 (function () {
-   ("use strict");
+   ("use strict")
+
 
    // -------------Загрузка шрифтов через скрипт------------
    @@include('modules/_fonts.js')
@@ -41,23 +42,23 @@
    // ------------------------------------------------------------------------------------
 
    // -----------Модальное окно-----------------------------
-   const humburgerBtn = document.querySelector(".hamburger");
-   const logo = document.querySelector(".header__logo");
+   const humburgerBtn = document.querySelector(".hamburger")
+   const logo = document.querySelector(".header__logo")
    const mainNav = new ModalDK({
       selector: ".nav",
       openBtnsSelector: ['.hamburger'],
       collapseOnFocusOut: true,
       onOpen() {
-         humburgerBtn.classList.add("is-active");
-         humburgerBtn.setAttribute("aria-expanded","true");
-         logo.classList.add("header__logo--active");
+         humburgerBtn.classList.add("is-active")
+         humburgerBtn.setAttribute("aria-expanded","true")
+         logo.classList.add("header__logo--active")
       },
       onClose() {
-         humburgerBtn.classList.remove("is-active");
-         humburgerBtn.setAttribute("aria-expanded", "false");
-         logo.classList.remove("header__logo--active");
+         humburgerBtn.classList.remove("is-active")
+         humburgerBtn.setAttribute("aria-expanded", "false")
+         logo.classList.remove("header__logo--active")
       },
-   });
+   })
    // ------------------------------------------------------
 
    // -----------Галерея------------------------------------
@@ -65,45 +66,45 @@
    // selector: ".gallery", // селектор контейнера, который объединяет все изображения
    // focusTrap: true,
    // collapseOnFocusOut: false,
-// });
+// })
    // ------------------------------------------------------
 
    // --------------Отправка почты--------------------------
    // 06cc9a6d-ae50-4dfb-ac79-1ec7f4823816 
-   const btnSendMail = document.querySelector('#btnSendMail');
-   const form  = document.querySelector("#form");
+   const btnSendMail = document.querySelector('#btnSendMail')
+   const form  = document.querySelector("#form")
    const sendMail = (e) => {
-      e.preventDefault();
+      e.preventDefault()
       
       if (FormValid.checkValid(form)) {
 
-         btnSendMail.classList.add("msg--sending");
-         btnSendMail.setAttribute("disabled", "");
+         btnSendMail.classList.add("msg--sending")
+         btnSendMail.setAttribute("disabled", "")
          const removeDone = ()=>{
-            btnSendMail.classList.remove("msg");
-            document.querySelector(".msg--done").removeEventListener("animationend", removeDone);
-            btnSendMail.classList.remove("msg--done");
+            btnSendMail.classList.remove("msg")
+            document.querySelector(".msg--done").removeEventListener("animationend", removeDone)
+            btnSendMail.classList.remove("msg--done")
          }
 
          // таймаут для "отправки"
          setTimeout(() => {
-            btnSendMail.classList.remove("msg--sending");
-            btnSendMail.removeAttribute("disabled");
-            btnSendMail.classList.add("msg");
-            btnSendMail.classList.add("msg--send");
-            btnSendMail.setAttribute("data-type", "ok");
-         }, 2000);
+            btnSendMail.classList.remove("msg--sending")
+            btnSendMail.removeAttribute("disabled")
+            btnSendMail.classList.add("msg")
+            btnSendMail.classList.add("msg--send")
+            btnSendMail.setAttribute("data-type", "ok")
+         }, 2000)
 
          // таймаут по которому показываем иконку
          setTimeout(() => {
             
-            btnSendMail.classList.remove("msg--send");
-            btnSendMail.removeAttribute("data-type");
-            btnSendMail.classList.add("msg--done");
+            btnSendMail.classList.remove("msg--send")
+            btnSendMail.removeAttribute("data-type")
+            btnSendMail.classList.add("msg--done")
 
-            document.querySelector(".msg--done").addEventListener("animationend", removeDone);
+            document.querySelector(".msg--done").addEventListener("animationend", removeDone)
 
-         }, 4000);
+         }, 4000)
 
 
       // Email.send({
@@ -114,79 +115,135 @@
       //    Body : "And this is the body"
       // }).then(
       // message => console.log(message)
-      // );
+      // )
       }
    }
 
-    if (btnSendMail) btnSendMail.addEventListener("click", (e)=> sendMail(e));
+    if (btnSendMail) btnSendMail.addEventListener("click", (e)=> sendMail(e))
    // ------------------------------------------------------
 
    // --------------Загрузка портфолио----------------------
-   const portfolioList = document.querySelector(".portfolio__list");
-   const template = document.querySelector('#portfolioItemColne');
-   if (portfolioList) {
-      
-      readFile("./files/portfolio/data.json", function(text){
-         data = JSON.parse(text);
-         data.forEach((el, i) => { 
-            addPortfolioItem(el);
-         });
-      });
+   function initPortfolio(element, filePath) {
+      return {
+         changedData: null,
+         readFile() {
+            const rawFile = new XMLHttpRequest()
+            rawFile.overrideMimeType("application/json")
+            rawFile.open("GET", filePath, true)
+            rawFile.onreadystatechange = () => {
+               if (rawFile.readyState === 4 && rawFile.status == "200") {
+                  this.fileData = JSON.parse(rawFile.responseText)
+                  this.changedData = [...this.fileData]
+                  this.sortBy('createDate', 'new')
+                  this.printPorfolioItems(this.changedData)
+               }
+            }
+               rawFile.send(null)
+         },
+         printPorfolioItems(data) {
+            this.clearPorfolioList()
+            data.forEach((el) => { 
+               this.addPortfolioItem(el)
+            })
+         },
+         addPortfolioItem (el) {
+            const protfolioDate = new Date(el.createDate)
+            const clone = $template.content.cloneNode(true)
+            const portfolioItem = clone.querySelector(".portfolio__item")
+            const portfolioImg = portfolioItem.querySelector(".portfolio__img")
+            const portfolioDate = portfolioItem.querySelector(".portfolio__date")
+            const portfolioName = portfolioItem.querySelector(".portfolio__name")
+            const portfolioContent = portfolioItem.querySelector(".portfolio__content")
+            const portfolioLink = portfolioItem.querySelector(".portfolio__link")
+            
+            portfolioItem.setAttribute("data-create-date", el.createDate)
+            portfolioItem.setAttribute("data-type", el.type)
+            portfolioItem.setAttribute("role", "listitem")
+               
+            portfolioImg.src = el.img
+            portfolioDate.setAttribute("datetime", el.createDate)
+            portfolioDate.innerHTML = this.getDateToItem(protfolioDate)
+            portfolioName.innerHTML = el.name
+            portfolioContent.innerHTML = el.content
+            portfolioLink.href = el.link
+
+            portfolioItem.appendChild(portfolioImg)
+            portfolioItem.appendChild(portfolioDate)
+            portfolioItem.appendChild(portfolioName)
+            portfolioItem.appendChild(portfolioContent)
+            portfolioItem.appendChild(portfolioLink)
+
+            element.appendChild(portfolioItem)
+         },
+         getDateToItem(date) {
+            // const monthNames = ["January", "February", "March", "April", "May", "June",
+            // "July", "August", "September", "October", "November", "December"
+            // ]
+            const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+            return `${monthNames[date.getMonth()]} ${date.getFullYear()}`
+         },
+         clearPorfolioList() {
+            element.innerHTML = ''
+         },
+         filterBy(field, value) {
+            if (value === 'all') {
+               this.changedData = [...this.fileData]
+               return
+            }
+            this.changedData = this.fileData.filter(el => el[field] === value)
+         },
+         sortBy(field, value) {
+            switch (value) {
+               case "new":
+                  this.changedData = this.changedData.sort((a, b) => a[field] < b[field] ? 1 : -1)
+                  break
+               case "old":
+                  this.changedData = this.changedData.sort((a, b) => a[field] > b[field] ? 1 : -1)
+                  break
+               default:
+                  this.changedData = this.shuffle(this.changedData)
+               }
+         },
+         shuffle(array) {
+            let currentIndex = array.length,  randomIndex;
+            while (currentIndex != 0) {
+               randomIndex = Math.floor(Math.random() * currentIndex);
+               currentIndex--;
+               [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+         }
+      }
    }
 
-   function readFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-      rawFile.send(null);
-   }
-
-   function addPortfolioItem(el){
-      const protfolioDate = new Date(el.createDate);
-
-      const clone = template.content.cloneNode(true);
-      const portfolioItem = clone.querySelector(".portfolio__item");
-      const portfolioImg = portfolioItem.querySelector(".portfolio__img");
-      const portfolioDate = portfolioItem.querySelector(".portfolio__date");
-      const portfolioName = portfolioItem.querySelector(".portfolio__name");
-      const portfolioContent = portfolioItem.querySelector(".portfolio__content");
-      const portfolioLink = portfolioItem.querySelector(".portfolio__link");
-
-      
-      portfolioItem.setAttribute("data-create-date", el.createDate)
-      portfolioItem.setAttribute("data-type", el.type)
-      portfolioItem.setAttribute("role", "listitem")
-
+   
+   const $portfolioList = document.querySelector(".portfolio__list")
+   const $template = document.querySelector('#portfolioItemColne')
+   
+   if ($portfolioList) { 
+      const myPortfolioList = initPortfolio($portfolioList, './files/portfolio/data.json')  
+      myPortfolioList.readFile()
          
-      portfolioImg.src = el.img;
-      portfolioDate.setAttribute("datetime", el.createDate);
-      portfolioDate.innerHTML = getDateToItem(protfolioDate)
-      portfolioName.innerHTML = el.name
-      portfolioContent.innerHTML = el.content
-      portfolioLink.href = el.link
+      // -----------------Сортировка портфолио-----------------
+      const $selects = document.querySelectorAll(".options__select")
+      if ($selects) {
+         $selects.forEach($select => {
+            $select.addEventListener("change", () => changeSelect($selects))
+            $select.addEventListener("menuchange", () => changeSelect($selects))
+         })
+      }
 
-      portfolioItem.appendChild(portfolioImg)
-      portfolioItem.appendChild(portfolioDate)
-      portfolioItem.appendChild(portfolioName)
-      portfolioItem.appendChild(portfolioContent)
-      portfolioItem.appendChild(portfolioLink)
-
-      portfolioList.appendChild(portfolioItem)
-   }
-
-   function getDateToItem(date) {
-      // const monthNames = ["January", "February", "March", "April", "May", "June",
-      // "July", "August", "September", "October", "November", "December"
-      // ];
-      const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-      return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+      function changeSelect($selects){
+         const data = {}
+         $selects.forEach(select => {
+            data[select.dataset.type] = {name: select.name, value: select.value}
+         })
+         myPortfolioList.filterBy(data.filter.name, data.filter.value)
+         myPortfolioList.sortBy(data.sort.name, data.sort.value)
+         myPortfolioList.printPorfolioItems(myPortfolioList.changedData)
+      }
+      // ------------------------------------------------------
+      
    }
    // ------------------------------------------------------
-     
-      
-   })();
+   })()

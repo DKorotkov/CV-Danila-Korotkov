@@ -1,0 +1,10 @@
+@use "__config" as *;
+
+.options {
+   display: flex;
+   gap: var(--space-md);
+   &__item {
+      flex-basis: 50%;
+      max-width: rem(250);
+   }
+}

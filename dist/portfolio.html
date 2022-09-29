@@ -65,7 +65,7 @@
    <!-- Ссылка на изображение -->
    <meta name="twitter:image" content="img/dk.jpg" />
 
-   <link rel="stylesheet" href="css/style.min.css?_v=20220926154517" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20220928155239" />
 
    <!-- Здесь загружается иконочный шрифт, если иконки используються в верхней части страницы -->
    <!-- <link rel="preload" href="/fonts/fontello.woff" as="font" /> -->
@@ -109,21 +109,24 @@
             <div class="portfolio main__content">
                <div class="main__body">
                   <div class="portfolio__options options">
-                     <label class="options__item" for=""></label>
-                     <select multiple class="options__select" name="date">
-                        <option value="new">Сначала новые</option>
-                        <option selected value="old">Сначала старые</option>
-                        <option selected value="random">В случайном порядке</option>
-                     </select>
+                     <div class="options__item">
+                        <label class="options__label clipped" for="select-date">Сортировать по дате</label>
+                        <select class="options__select" id="select-date" name="createDate" data-type="sort">
+                           <option value="new">Сначала новые</option>
+                           <option value="old">Сначала старые</option>
+                           <option value="random">В случайном порядке</option>
+                        </select>
+                     </div>
+                     <div class="options__item">
+                        <label class="options__label clipped" for="select-type">Сортировать по типу</label>
+                        <select class="options__select" id="select-type" name="type" data-type="filter">
+                           <option value="all">Все</option>
+                           <option value="fun">For fun</option>
+                           <option value="portfolio">Портфолио</option>
+                           <option value="work">Работа</option>
+                        </select>
+                     </div>
                   </div>
-                  <div class="portfolio__options options">
-                     <label class="options__item" for=""></label>
-                     <select class="options__select" name="date">
-                        <option value="new">Сначала новые</option>
-                        <option selected value="old">Сначала старые</option>
-                     </select>
-                  </div>
-
                   <ul class="portfolio__list" role="list"></ul>
                </div>
             </div>
@@ -189,15 +192,15 @@
    </div>
 </footer>
  <!-- js для загрухки шрифтов по времени, событию или из кэша -->
-<script src="js/fontfaceobserver.standalone.min.js?_v=20220926154517"></script>
+<script src="js/fontfaceobserver.standalone.min.js?_v=20220928155239"></script>
 <!-- ленивая загрузка изображений -->
-<!-- <script defer src="js/lazyload.min.js?_v=20220926154517"></script> -->
-<!-- <script src="js/ls.bgset.js?_v=20220926154517"></script> -->
+<!-- <script defer src="js/lazyload.min.js?_v=20220928155239"></script> -->
+<!-- <script src="js/ls.bgset.js?_v=20220928155239"></script> -->
 <!-- Скрипт полифил для корректной работы не стадартного фокуса (focus-visible)  -->
-<script src="js/focus-visible.min.js?_v=20220926154517"></script>
-<script src="https://smtpjs.com/v3/smtp.js?_v=20220926154517"></script>
+<script src="js/focus-visible.min.js?_v=20220928155239"></script>
+<script src="https://smtpjs.com/v3/smtp.js?_v=20220928155239"></script>
 
-<script src="js/script.min.js?_v=20220926154517"></script>
+<script src="js/script.min.js?_v=20220928155239"></script>
 
    </body>
 </html>

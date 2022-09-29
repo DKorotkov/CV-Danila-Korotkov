@@ -11,21 +11,24 @@
             <div class="portfolio main__content">
                <div class="main__body">
                   <div class="portfolio__options options">
-                     <label class="options__item" for=""></label>
-                     <select multiple class="options__select" name="date">
-                        <option value="new">Сначала новые</option>
-                        <option selected value="old">Сначала старые</option>
-                        <option selected value="random">В случайном порядке</option>
-                     </select>
+                     <div class="options__item">
+                        <label class="options__label clipped" for="select-date">Сортировать по дате</label>
+                        <select class="options__select" id="select-date" name="createDate" data-type="sort">
+                           <option value="new">Сначала новые</option>
+                           <option value="old">Сначала старые</option>
+                           <option value="random">В случайном порядке</option>
+                        </select>
+                     </div>
+                     <div class="options__item">
+                        <label class="options__label clipped" for="select-type">Сортировать по типу</label>
+                        <select class="options__select" id="select-type" name="type" data-type="filter">
+                           <option value="all">Все</option>
+                           <option value="fun">For fun</option>
+                           <option value="portfolio">Портфолио</option>
+                           <option value="work">Работа</option>
+                        </select>
+                     </div>
                   </div>
-                  <div class="portfolio__options options">
-                     <label class="options__item" for=""></label>
-                     <select class="options__select" name="date">
-                        <option value="new">Сначала новые</option>
-                        <option selected value="old">Сначала старые</option>
-                     </select>
-                  </div>
-
                   <ul class="portfolio__list" role="list"></ul>
                </div>
             </div>
