@@ -154,6 +154,7 @@
             const portfolioDate = portfolioItem.querySelector(".portfolio__date")
             const portfolioName = portfolioItem.querySelector(".portfolio__name")
             const portfolioContent = portfolioItem.querySelector(".portfolio__content")
+            const portfolioMoreInfo = portfolioItem.querySelector(".portfolio__more-info")
             const portfolioLink = portfolioItem.querySelector(".portfolio__link")
             
             portfolioItem.setAttribute("data-create-date", el.createDate)
@@ -165,14 +166,10 @@
             portfolioDate.innerHTML = this.getDateToItem(protfolioDate)
             portfolioName.innerHTML = el.name
             portfolioContent.innerHTML = el.content
+            portfolioMoreInfo.innerHTML = el.more_info
             portfolioLink.href = el.link
 
             portfolioItem.appendChild(portfolioImg)
-            portfolioItem.appendChild(portfolioDate)
-            portfolioItem.appendChild(portfolioName)
-            portfolioItem.appendChild(portfolioContent)
-            portfolioItem.appendChild(portfolioLink)
-
             element.appendChild(portfolioItem)
          },
          getDateToItem(date) {

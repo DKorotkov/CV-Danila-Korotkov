@@ -101,3 +101,8 @@
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes portfolio-icon-link {
+   from {left: -200%;}
+   to {left: 200%;}
+}

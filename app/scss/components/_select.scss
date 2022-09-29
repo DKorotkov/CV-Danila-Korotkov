@@ -8,6 +8,7 @@
    --hight-size: calc(var(--hight-option) * var(--size) + (var(--padding)));
    
    &__menu {
+      position: relative;
       width: var(--width);
       @media (hover: none) and (pointer: coarse) {
            display: none;
@@ -61,10 +62,15 @@
 
    &__popup:not([hidden]) {
       display: grid;
+      position: absolute;
+      right: 0;
+      left: 0;
+      background-color: var(--clr-white);
       padding-block: calc(var(--padding) / 2);
       border: rem(1) solid var(--clr-silver);
       border-top: none;
       gap: rem(5);
+      z-index: 100;
 
       height: var(--hight-size);
       overflow-x: hidden;
