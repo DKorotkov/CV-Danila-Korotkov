@@ -17,7 +17,8 @@
       flex-direction: column;
       gap: var(--space-xl);
       padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
-
+      padding-bottom: var(--sz-main-padding);
+      
       @media (min-width: 50em) {
          padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3 + var(--space-lg));
          flex-direction: row;
@@ -45,14 +46,13 @@
    }
    
    &__header {
-         position: relative;
-
-      
+      position: relative;
       text-transform: uppercase;
       font-weight: var(--fw-bold);
       justify-self: flex-start;
       width: min-content;
       padding-bottom: 0.5em;
+      font-family: var(--ff-header);
       // padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
       // @include rfs(42px);
 
@@ -72,6 +72,7 @@
    &:not(:has(&__vertex)) &__header {
       left: var(--sz-main-padding);
       padding-top: calc(var(--fs-logo) + var(--sz-main-padding)* 3);
+      
       @media (min-width: 70em) {
          left: calc(var(--sz-main-padding) + var(--sz-aside-width));
          padding-top: var(--sz-main-padding);

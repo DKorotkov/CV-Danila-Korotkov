@@ -10,6 +10,10 @@
    gap: rem(40);
    max-height: rem(650);
 
+   @media (hover: none) and (pointer: coarse) {
+      margin-bottom: var(--space-lg);
+   }
+
    &__header {
       @include rfs(26px);
    }
@@ -45,6 +49,7 @@
       border: none;
       background-color: transparent;
       color: var(--clr-silver);
+      border-radius: 0;
       border-bottom: rem(1) solid var(--clr-silver);
       width: 100%;
    }

@@ -36,12 +36,18 @@
       font-size: var(--fs-logo);
       border: rem(2) solid var(--color);
       padding: em(10,32) em(15, 32);
-      padding-bottom: em(8, 32);
-      z-index: 20;
+      padding-bottom: em(12, 32);
+      font-weight: var(--fw-semi-bold);
+     
       transition: all .5s ease;
+
+      @media (min-width: 50em) {
+         z-index: 20;
+      }
 
       @media (min-width: 70em) {
          --color: var(--clr-white);
+          
       }
    }
 

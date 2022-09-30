@@ -41,7 +41,8 @@
    --clr-information: rgb(56, 132, 255);
    
    // _____________________Шрифт_________________________________
-   --ff-main: 'LyuLin', serif;
+   --ff-main: 'Mulish', system-ui;
+   --ff-header: 'Mulish', var(--ff-main);
    
    --ff-body: var(--ff-main);
    --ff-heading: var(--ff-main);

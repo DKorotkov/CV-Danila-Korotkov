@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчкиа Данилы Короткова ", "keywords": "Ключевые слова", "title": " Резюме ", "site_name": " Данила Коротков CV ", "socials": { "autor": " Данила Коротков ", "copyright": " Данила Коротков ", "adress":
-   "danila.korotkov@gmail.com", "image": "img/dk.jpg", "link": "/index.html", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
+   <!-- prettier-ignore -->
+   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчика Данилы Короткова ", "keywords": "front-end, фронт, разработка, web, вэб, веб, создание сайтов, junior, html, js, wordpress", "title": "Портфолио", "site_name": "Данила Коротков CV", "socials": { "autor": "Данила Коротков ", "copyright": " Данила Коротков ", "adress": "danila.korotkov@gmail.com", "image": "img/logo.png", "link": "/", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
    <body class="body">
-      @@include('html/_header.html')
+      @@include('html/_header.html', {"pageNum": "2"})
       <aside class="aside"></aside>
       <main class="main" id="main-content">
          <h1 class="main__header">Портфолио</h1>
@@ -36,10 +36,12 @@
          <template id="portfolioItemColne">
             <li class="portfolio__item" role="listitem">
                <img class="portfolio__img" src="#" alt="" />
-               <time class="portfolio__date"></time>
-               <span class="portfolio__name"></span>
-               <p class="portfolio__content"></p>
-               <p class="portfolio__more-info"></p>
+               <div class="portfolio__wrapper">
+                  <time class="portfolio__date"></time>
+                  <span class="portfolio__name"></span>
+                  <p class="portfolio__content"></p>
+                  <p class="portfolio__more-info"></p>
+               </div>
                <a class="portfolio__link" href="#" title="Открыть проект в новом окне" target="_blank">
                   <svg class="portfolio__link-icon" role="img"><use xlink:href="img/icons/icons.svg#arrow-right"></use></svg>
                </a>

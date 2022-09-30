@@ -19,7 +19,7 @@
    &__button {
       display: flex;
       position: relative;
-      
+      color: var(--clr-black);
       height: rem(45);
       padding-inline: var(--padding);
       text-align: left;
@@ -31,6 +31,9 @@
 
    &__native {
       display: none;
+      background-color: var(--clr-white);
+      accent-color: var(--clr-black);
+      border-radius: 0;
       @media (hover: none) and (pointer: coarse) {
            display: block;
       }

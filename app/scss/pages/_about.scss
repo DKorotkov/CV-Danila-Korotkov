@@ -5,6 +5,8 @@
    &__header {
       width: min-content;
       font-weight: var(--fw-bold);
+      @include rfs(62px);
+      
    }
 
    &__header-accent {

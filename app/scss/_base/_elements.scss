@@ -152,10 +152,11 @@ picture {
 
 :where(h1) {
    font-family: var(--ff-heading);
-   font-size: var(--fs-48);
+   @include rfs(62px);
+   
 
    @media (min-width: (50rem)) { 
-      font-size: var(--fs-72);
+      
       font-weight: var(--fw-bold);
       line-height: 1.1;
    }
@@ -163,26 +164,29 @@ picture {
 
 :where(h2) {
    font-family: var(--ff-heading);
-   font-size: var(--fs-48);
    font-weight: var(--fw-semi-bold);
+   @include rfs(48px);
 }
 
 :where(h3) {
    font-family: var(--ff-heading);
-   font-size: var(--fs-36);
+   
    font-weight: var(--fw-semi-bold);
+   @include rfs(36px);
 }
 
 :where(h4) {
    font-family: var(--ff-heading);
-   font-size: var(--fs-24);
+   
    font-weight: var(--fw-semi-bold);
+   @include rfs(24px);
 }
 
 :where(h5) {
    font-family: var(--ff-heading);
-   font-size: var(--fs-20);
+   
    font-weight: var(--fw-semi-bold);
+   @include rfs(20px);
 }
 
 :where(a) {
@@ -196,4 +200,8 @@ picture {
 
 .box-shadow {
    box-shadow: 0 5px 25px -5px rgba($color: #000000, $alpha: 0.6);
+}
+
+:where(p) {
+   line-height: 1.4;
 }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчкиа Данилы Короткова ", "keywords": "Ключевые слова", "title": " Обо мне ", "site_name": " Данила Коротков CV ", "socials": { "autor": " Данила Коротков ", "copyright": " Данила Коротков ", "adress":
-   "danila.korotkov@gmail.com", "image": "img/dk.jpg", "link": "/index.html", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
+   <!-- prettier-ignore -->
+   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчика Данилы Короткова ", "keywords": "front-end, фронт, разработка, web, вэб, веб, создание сайтов, junior, html, js, wordpress", "title": "Контакты", "site_name": "Данила Коротков CV", "socials": { "autor": "Данила Коротков ", "copyright": " Данила Коротков ", "adress": "danila.korotkov@gmail.com", "image": "img/logo.png", "link": "/", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
    <body class="body">
-      @@include('html/_header.html')
+      @@include('html/_header.html', {"pageNum": "4"})
       <aside class="aside"></aside>
       <main class="main contacts" id="main-content">
          <h1 class="clipped main__header">Контакты</h1>
@@ -24,7 +24,7 @@
                      <span class="form__label-text">Сообщение</span>
                   </label>
                   <button class="btn form__btn" id="btnSendMail" type="button" mozactionhint="send">
-                     <span class="msg__text">Отправить</span>
+                     <span class="msg__text">отправить</span>
                      <div class="msg__inner">
                         <div class="msg__ok" title="Сообщение отправлено">
                            <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.33334 12.7143L9.56341 17L18.6667 7" stroke-linecap="round" /></svg>

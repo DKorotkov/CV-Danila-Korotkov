@@ -2,7 +2,7 @@
 
 :where(.text-decration)::before {
    position: absolute;
-   top: 20%;
+   // top: 20%;
    left: 7%;
    content: '';
    width: 0;
@@ -32,17 +32,6 @@
 
 }
 
-:where(.text-decration):where([aria-current="page"])::after,
-:where([aria-selected="true"]) > .text-decration::after {
-   position: absolute;
-   bottom: 5px;
-   left: 0;
-   content: '';
-   width: 100%;
-   height: rem(1);
-   background-color: var(--clr-primary);
-   animation: line-opacity .6s ease;
-}
 
 @keyframes line-opacity {
    0%, 50% {opacity: 0;}
