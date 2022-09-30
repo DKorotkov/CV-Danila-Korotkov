@@ -85,13 +85,13 @@
       
       if (FormValid.checkValid(form)) {
 
-         // btnSendMail.classList.add("msg--sending")
-         // btnSendMail.setAttribute("disabled", "")
-         // const removeDone = ()=>{
-         //    btnSendMail.classList.remove("msg")
-         //    document.querySelector(".msg--done").removeEventListener("animationend", removeDone)
-         //    btnSendMail.classList.remove("msg--done")
-         // }
+         btnSendMail.classList.add("msg--sending")
+         btnSendMail.setAttribute("disabled", "")
+         const removeDone = ()=> {
+            btnSendMail.classList.remove("msg")
+            document.querySelector(".msg--done").removeEventListener("animationend", removeDone)
+            btnSendMail.classList.remove("msg--done")
+         }
 
          // // таймаут для "отправки"
          // setTimeout(() => {
@@ -102,23 +102,33 @@
          //    btnSendMail.setAttribute("data-type", "ok")
          // }, 2000)
 
-         // // таймаут по которому показываем иконку
-         // setTimeout(() => {
-            
-         //    btnSendMail.classList.remove("msg--send")
-         //    btnSendMail.removeAttribute("data-type")
-         //    btnSendMail.classList.add("msg--done")
-
-         //    document.querySelector(".msg--done").addEventListener("animationend", removeDone)
-
-         // }, 4000)
+        
 
          emailjs.send('service_aq7mfsb', 'template_sty9rtw', emailParams)
             .then(function(response) {
-               console.log('SUCCESS!', response.status, response.text);
+               btnSendMail.classList.remove("msg--sending")
+               btnSendMail.removeAttribute("disabled")
+               btnSendMail.classList.add("msg")
+               btnSendMail.classList.add("msg--send")
+               btnSendMail.setAttribute("data-type", "ok")
             }, function(error) {
-               console.log('FAILED...', error);
+               btnSendMail.classList.remove("msg--sending")
+               btnSendMail.removeAttribute("disabled")
+               btnSendMail.classList.add("msg")
+               btnSendMail.classList.add("msg--send")
+               btnSendMail.setAttribute("data-type", "error")
+               console.log('failed send email: ', error);
             });
+          // таймаут по которому показываем иконку
+         setTimeout(() => {
+            
+            btnSendMail.classList.remove("msg--send")
+            btnSendMail.removeAttribute("data-type")
+            btnSendMail.classList.add("msg--done")
+
+            document.querySelector(".msg--done").addEventListener("animationend", removeDone)
+            form.reset();
+         }, 3000)
 
       }
    }
