@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+   <!-- prettier-ignore -->
    <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -18,9 +19,9 @@
    <!-- Отключает форматирование ссылки у номера телефона на ios -->
    <meta name="format-detection" content="telephone=no" />
    <!-- Краткое описание страницы -->
-   <meta name="description" content="Сайт портфолио front-end разработчкиа Данилы Короткова " />
+   <meta name="description" content="Сайт портфолио front-end разработчика Данилы Короткова " />
    <!-- Ключевые слова страницы -->
-   <meta name="keywords" content="Ключевые слова" />
+   <meta name="keywords" content="front-end, фронт, разработка, web, вэб, веб, создание сайтов, junior, html, js, wordpress" />
 
    <!-- Управление доступом поисковых роботов к старнице -->
    <!-- <meta name="robots" content=""> -->
@@ -31,7 +32,7 @@
    <!-- <meta name="robots" content="noimageindex, nofolow"> -->
 
    <!-- Автор страницы -->
-   <meta name="Author" content=" Данила Коротков " />
+   <meta name="Author" content="Данила Коротков " />
    <!-- Авторские права -->
    <meta name="Copyright" content=" Данила Коротков " />
    <!-- Адрес автора -->
@@ -43,29 +44,29 @@
    <!-- Тип контента -->
    <meta property="og:type" content="article" />
    <!-- Заголовок страницы, который будет выводиться в записи социальной сети -->
-   <meta property="og:title" content=" Резюме " />
+   <meta property="og:title" content="Портфолио" />
    <!-- Описание страницы -->
-   <meta property="og:description" content="Сайт портфолио front-end разработчкиа Данилы Короткова " />
+   <meta property="og:description" content="Сайт портфолио front-end разработчика Данилы Короткова " />
    <!-- Ссылка на изображение которое будет публиковаться в записи -->
-   <meta property="og:image" content="img/dk.jpg" />
+   <meta property="og:image" content="img/logo.png" />
    <!-- Ссылка на текущую страницу -->
-   <meta property="og:url" content="/index.html" />
+   <meta property="og:url" content="/" />
    <!-- Название сайта -->
-   <meta property="og:site_name" content=" Данила Коротков CV " />
+   <meta property="og:site_name" content="Данила Коротков CV" />
 
    <!-- Twitter -->
    <!-- Тип карты -->
    <meta name="twitter:card" content="summary" />
    <!-- Имя\Логин автора -->
-   <meta name="twitter:site" content=" Данила Коротков " />
+   <meta name="twitter:site" content="Данила Коротков " />
    <!-- Название страницы -->
-   <meta name="twitter:title" content=" Резюме " />
+   <meta name="twitter:title" content="Портфолио" />
    <!-- Описание страницы -->
-   <meta name="twitter:description" content="Сайт портфолио front-end разработчкиа Данилы Короткова " />
+   <meta name="twitter:description" content="Сайт портфолио front-end разработчика Данилы Короткова " />
    <!-- Ссылка на изображение -->
-   <meta name="twitter:image" content="img/dk.jpg" />
+   <meta name="twitter:image" content="img/logo.png" />
 
-   <link rel="stylesheet" href="css/style.min.css?_v=20220929134819" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20220930123411" />
 
    <!-- Здесь загружается иконочный шрифт, если иконки используються в верхней части страницы -->
    <!-- <link rel="preload" href="/fonts/fontello.woff" as="font" /> -->
@@ -78,7 +79,7 @@
          html.classList.add("fonts-loaded");
       }
    </script>
-   <title> Данила Коротков CV  |  Резюме </title>
+   <title>Данила Коротков CV | Портфолио</title>
 </head>
 
    <body class="body">
@@ -93,8 +94,8 @@
       </button>
    </div>
    <nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden>
-      <ul class="nav__box" role="list">
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/" aria-current="page">Обо мне</a></li>
+      <ul class="nav__box" role="list" data-current="2">
+         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/">Обо мне</a></li>
          <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/portfolio.html">Портфолио</a></li>
          <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/resume.html">Резюме</a></li>
          <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/contacts.html">Контакты</a></li>
@@ -134,10 +135,12 @@
          <template id="portfolioItemColne">
             <li class="portfolio__item" role="listitem">
                <picture><source srcset="#" type="image/webp"><img class="portfolio__img" src="#" alt="" /></picture>
-               <time class="portfolio__date"></time>
-               <span class="portfolio__name"></span>
-               <p class="portfolio__content"></p>
-               <p class="portfolio__more-info"></p>
+               <div class="portfolio__wrapper">
+                  <time class="portfolio__date"></time>
+                  <span class="portfolio__name"></span>
+                  <p class="portfolio__content"></p>
+                  <p class="portfolio__more-info"></p>
+               </div>
                <a class="portfolio__link" href="#" title="Открыть проект в новом окне" target="_blank">
                   <svg class="portfolio__link-icon" role="img"><use xlink:href="img/icons/icons.svg#arrow-right"></use></svg>
                </a>
@@ -193,15 +196,15 @@
    </div>
 </footer>
  <!-- js для загрухки шрифтов по времени, событию или из кэша -->
-<script src="js/fontfaceobserver.standalone.min.js?_v=20220929134819"></script>
+<script src="js/fontfaceobserver.standalone.min.js?_v=20220930123411"></script>
 <!-- ленивая загрузка изображений -->
-<!-- <script defer src="js/lazyload.min.js?_v=20220929134819"></script> -->
-<!-- <script src="js/ls.bgset.js?_v=20220929134819"></script> -->
+<!-- <script defer src="js/lazyload.min.js?_v=20220930123411"></script> -->
+<!-- <script src="js/ls.bgset.js?_v=20220930123411"></script> -->
 <!-- Скрипт полифил для корректной работы не стадартного фокуса (focus-visible)  -->
-<script src="js/focus-visible.min.js?_v=20220929134819"></script>
-<script src="https://smtpjs.com/v3/smtp.js?_v=20220929134819"></script>
+<script src="js/focus-visible.min.js?_v=20220930123411"></script>
+<script src="https://smtpjs.com/v3/smtp.js?_v=20220930123411"></script>
 
-<script src="js/script.min.js?_v=20220929134819"></script>
+<script src="js/script.min.js?_v=20220930123411"></script>
 
    </body>
 </html>
