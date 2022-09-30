@@ -78,44 +78,44 @@
       
       if (FormValid.checkValid(form)) {
 
-         btnSendMail.classList.add("msg--sending")
-         btnSendMail.setAttribute("disabled", "")
-         const removeDone = ()=>{
-            btnSendMail.classList.remove("msg")
-            document.querySelector(".msg--done").removeEventListener("animationend", removeDone)
-            btnSendMail.classList.remove("msg--done")
-         }
+         // btnSendMail.classList.add("msg--sending")
+         // btnSendMail.setAttribute("disabled", "")
+         // const removeDone = ()=>{
+         //    btnSendMail.classList.remove("msg")
+         //    document.querySelector(".msg--done").removeEventListener("animationend", removeDone)
+         //    btnSendMail.classList.remove("msg--done")
+         // }
 
-         // таймаут для "отправки"
-         setTimeout(() => {
-            btnSendMail.classList.remove("msg--sending")
-            btnSendMail.removeAttribute("disabled")
-            btnSendMail.classList.add("msg")
-            btnSendMail.classList.add("msg--send")
-            btnSendMail.setAttribute("data-type", "ok")
-         }, 2000)
+         // // таймаут для "отправки"
+         // setTimeout(() => {
+         //    btnSendMail.classList.remove("msg--sending")
+         //    btnSendMail.removeAttribute("disabled")
+         //    btnSendMail.classList.add("msg")
+         //    btnSendMail.classList.add("msg--send")
+         //    btnSendMail.setAttribute("data-type", "ok")
+         // }, 2000)
 
-         // таймаут по которому показываем иконку
-         setTimeout(() => {
+         // // таймаут по которому показываем иконку
+         // setTimeout(() => {
             
-            btnSendMail.classList.remove("msg--send")
-            btnSendMail.removeAttribute("data-type")
-            btnSendMail.classList.add("msg--done")
+         //    btnSendMail.classList.remove("msg--send")
+         //    btnSendMail.removeAttribute("data-type")
+         //    btnSendMail.classList.add("msg--done")
 
-            document.querySelector(".msg--done").addEventListener("animationend", removeDone)
+         //    document.querySelector(".msg--done").addEventListener("animationend", removeDone)
 
-         }, 4000)
+         // }, 4000)
 
 
-      // Email.send({
-      //    SecureToken : "06cc9a6d-ae50-4dfb-ac79-1ec7f4823816 ",
-      //    To : 'danila.korotkov@gmail.com',
-      //    From : "you@isp.com",
-      //    Subject : "This is the subject",
-      //    Body : "And this is the body"
-      // }).then(
-      // message => console.log(message)
-      // )
+      Email.send({
+         SecureToken : "06cc9a6d-ae50-4dfb-ac79-1ec7f4823816 ",
+         To : 'danila.korotkov@gmail.com',
+         From : "you@isp.com",
+         Subject : "This is the subject",
+         Body : "And this is the body"
+      }).then(
+      message => console.log(message)
+      )
       }
    }
 
