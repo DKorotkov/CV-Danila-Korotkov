@@ -108,9 +108,9 @@
 
 
       Email.send({
-         SecureToken : "06cc9a6d-ae50-4dfb-ac79-1ec7f4823816 ",
-         To : 'danila.korotkov@gmail.com',
-         From : "you@isp.com",
+         SecureToken : "87bd7d00-58ce-40fa-b052-995b8bf19bf1",
+         To : 'doubled@bk.ru',
+         From : "doubled@bk.ru",
          Subject : "This is the subject",
          Body : "And this is the body"
       }).then(
