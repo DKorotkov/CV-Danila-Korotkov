@@ -74,6 +74,13 @@
    const btnSendMail = document.querySelector('#btnSendMail')
    const form  = document.querySelector("#form")
    const sendMail = (e) => {
+      
+      const emailParams = {
+         from_name: 'James',
+         reply_to: 's@s',
+         message: "messege"
+      };
+
       e.preventDefault()
       
       if (FormValid.checkValid(form)) {
@@ -106,20 +113,20 @@
 
          // }, 4000)
 
+         emailjs.send('service_aq7mfsb', 'template_sty9rtw', emailParams)
+            .then(function(response) {
+               console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+               console.log('FAILED...', error);
+            });
 
-      Email.send({
-         SecureToken : "87bd7d00-58ce-40fa-b052-995b8bf19bf1",
-         To : 'doubled@bk.ru',
-         From : "doubled@bk.ru",
-         Subject : "This is the subject",
-         Body : "And this is the body"
-      }).then(
-      message => console.log(message)
-      )
       }
    }
 
-    if (btnSendMail) btnSendMail.addEventListener("click", (e)=> sendMail(e))
+    if (btnSendMail) {
+      emailjs.init("2WyxNkrXZ5yfWQ-uh")
+      btnSendMail.addEventListener("click", (e)=> sendMail(e))
+   }
    // ------------------------------------------------------
 
    // --------------Загрузка портфолио----------------------
