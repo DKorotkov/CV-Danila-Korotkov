@@ -1,6 +1,7 @@
 @use "__config" as *;
 
 .footer {
+   position: relative;
    padding-block: var(--sz-main-padding);
    background-color: var(--clr-primary);
    color: var(--clr-white);
@@ -14,8 +15,21 @@
       width: 100%;
    }
 
-   &__container {
-   }
+   // &::before {
+   //    display: block;
+   //    position: fixed;
+   //    right: 0;
+   //    bottom: 0;
+   //    left: 0;
+   //    content: '';
+   //    z-index: 1000;
+   //    background-color: var(--clr-white);
+   //    height: 100%;
+   // }
+
+   // &:is(&--load)::before {
+   //    animation: footer 1s ease forwards;
+   // }
 
    &__contacts {
       display: flex;

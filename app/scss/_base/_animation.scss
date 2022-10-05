@@ -106,3 +106,25 @@
    from {left: -200%;}
    to {left: 200%;}
 }
+
+@keyframes aside {
+   80% {
+      z-index: -1;
+      width: 0;
+      background-color: var(--clr-primary);
+   }
+   100% {
+      z-index: -1;
+      width: var(--sz-aside-width);
+      background-color: var(--clr-primary);
+   }
+}
+
+@keyframes footer {
+   100% {
+      top: 100%;
+      z-index: -1;
+      height: 0;
+      background-color: var(--clr-primary);
+   }
+}
