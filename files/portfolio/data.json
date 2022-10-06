@@ -33,5 +33,14 @@
       "more_info": "Стояла задача разработать страницу с галереей, которая поддерживает добавление изображений по ссылка или из файла",
       "img": "img/portfolio/Ecwid test assessment (gallery).png",
       "createDate": "2021-12-15"
+   },
+   {
+      "name": "Страница портфолио с анимацией",
+      "link": "https://dkorotkov.github.io/Ecwid-test-assessment/",
+      "type": "fun",
+      "content": "Простой пример работы с аниацией страницы портфолио Макет взят на просторах Instagram",
+      "more_info": "<b>Особенности</b><br>Для анимации блоков был применен GSAP.",
+      "img": "img/portfolio/simple-portfolio.png",
+      "createDate": "2021-03-10"
    }
 ]
