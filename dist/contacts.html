@@ -74,7 +74,8 @@
    <meta name="msapplication-TileColor" content="#ffffff" />
    <meta name="theme-color" content="#ffffff" />
 
-   <link rel="stylesheet" href="css/style.min.css?_v=20221005150029" />
+   <link rel="stylesheet" href="css/loading.min.css?_v=20221006101414" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20221006101414" />
 
    <!-- Здесь загружается иконочный шрифт, если иконки используються в верхней части страницы -->
    <!-- <link rel="preload" href="/fonts/fontello.woff" as="font" /> -->
@@ -110,6 +111,7 @@
       </ul>
    </nav>
 </header>
+<div class="loading">Загрузка...</div>
 
       <aside class="aside"></aside>
       <main class="main contacts" id="main-content">
@@ -130,7 +132,7 @@
                      <textarea class="form__input form__textarea" name="message" id="input-meassage" mozactionhint="next" maxlength="150"></textarea>
                      <span class="form__label-text">Сообщение</span>
                   </label>
-                  <button class="btn form__btn" id="btnSendMail" type="button" mozactionhint="send">
+                  <button class="btn form__btn" id="btnSendMail" type="submit" mozactionhint="send">
                      <span class="msg__text">отправить</span>
                      <div class="msg__inner">
                         <div class="msg__ok" title="Сообщение отправлено">
@@ -217,15 +219,15 @@
    </div>
 </footer>
  <!-- js для загрухки шрифтов по времени, событию или из кэша -->
-<script src="js/fontfaceobserver.standalone.min.js?_v=20221005150029"></script>
+<script src="js/fontfaceobserver.standalone.min.js?_v=20221006101414"></script>
 <!-- ленивая загрузка изображений -->
-<!-- <script defer src="js/lazyload.min.js?_v=20221005150029"></script> -->
-<!-- <script src="js/ls.bgset.js?_v=20221005150029"></script> -->
+<!-- <script defer src="js/lazyload.min.js?_v=20221006101414"></script> -->
+<!-- <script src="js/ls.bgset.js?_v=20221006101414"></script> -->
 <!-- Скрипт полифил для корректной работы не стадартного фокуса (focus-visible)  -->
-<script src="js/focus-visible.min.js?_v=20221005150029"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js?_v=20221005150029"></script>
+<script src="js/focus-visible.min.js?_v=20221006101414"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js?_v=20221006101414"></script>
 
-<script src="js/script.min.js?_v=20221005150029"></script>
+<script src="js/script.min.js?_v=20221006101414"></script>
 
    </body>
 </html>

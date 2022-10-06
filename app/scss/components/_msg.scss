@@ -24,6 +24,11 @@
       );  
       animation: AnimateBG 5s ease infinite;
    }
+
+   &--send,
+   &--done {
+      height: rem(35);
+   }
    
    &--send::before,
    &--done::after {
