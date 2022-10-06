@@ -36,11 +36,11 @@
    },
    {
       "name": "Страница портфолио с анимацией",
-      "link": "https://dkorotkov.github.io/Ecwid-test-assessment/",
+      "link": "https://dkorotkov.github.io/protfolio-cv-animation/",
       "type": "fun",
       "content": "Простой пример работы с аниацией страницы портфолио Макет взят на просторах Instagram",
       "more_info": "<b>Особенности</b><br>Для анимации блоков был применен GSAP.",
       "img": "img/portfolio/simple-portfolio.png",
-      "createDate": "2021-03-10"
+      "createDate": "2022-03-10"
    }
 ]
