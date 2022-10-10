@@ -6,26 +6,26 @@
       @@include('html/_header.html', {"pageNum": "2"})
       <aside class="aside"></aside>
       <main class="main" id="main-content">
-         <h1 class="main__header">Портфолио</h1>
+         <h1 class="main__header" data-lang="">Портфолио</h1>
          <div class="container main__container">
             <div class="portfolio main__content">
                <div class="main__body">
                   <div class="portfolio__options options">
                      <div class="options__item">
-                        <label class="options__label clipped" for="select-date">Сортировать по дате</label>
+                        <label class="options__label clipped" for="select-date" data-lang="">Сортировать по дате</label>
                         <select class="options__select" id="select-date" name="createDate" data-type="sort">
-                           <option value="new">Сначала новые</option>
-                           <option value="old">Сначала старые</option>
-                           <option value="random">В случайном порядке</option>
+                           <option value="new" data-lang="">Сначала новые</option>
+                           <option value="old" data-lang="">Сначала старые</option>
+                           <option value="random" data-lang="">В случайном порядке</option>
                         </select>
                      </div>
                      <div class="options__item">
-                        <label class="options__label clipped" for="select-type">Сортировать по типу</label>
+                        <label class="options__label clipped" for="select-type" data-lang="">Сортировать по типу</label>
                         <select class="options__select" id="select-type" name="type" data-type="filter">
-                           <option value="all">Все</option>
+                           <option value="all" data-lang="">Все</option>
                            <option value="fun">For fun</option>
-                           <option value="portfolio">Портфолио</option>
-                           <option value="work">Работа</option>
+                           <option value="portfolio" data-lang="">Портфолио</option>
+                           <option value="work" data-lang="">Работа</option>
                         </select>
                      </div>
                   </div>
@@ -42,7 +42,7 @@
                   <p class="portfolio__content"></p>
                   <p class="portfolio__more-info"></p>
                </div>
-               <a class="portfolio__link" href="#" title="Открыть проект в новом окне" target="_blank">
+               <a class="portfolio__link" href="#" title="Открыть проект в новом окне" target="_blank" data-lang="title">
                   <svg class="portfolio__link-icon" role="img"><use xlink:href="img/icons/icons.svg#arrow-right"></use></svg>
                </a>
             </li>

@@ -1,3 +1,5 @@
+@use "__config" as *;
+
 // npm install hamburgers - если не установлен
 
 // $hamburger-layer-color: var(--clr-black) !default;
@@ -18,6 +20,17 @@ $hamburger-types: (squeeze) !default;
       
    }
 }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+   outline: rem(1) solid var(--clr-white);
+}
+
+.hamburger:is(.is-active) .hamburger-inner,
+.hamburger:is(.is-active) .hamburger-inner::before, 
+.hamburger:is(.is-active) .hamburger-inner::after {
+   outline: none;
+}
+
 
 
 

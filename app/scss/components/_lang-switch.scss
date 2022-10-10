@@ -1,0 +1,37 @@
+@use "__config" as *;
+
+.lang-switch {
+   display: block;
+   position: absolute;
+   right: var(--sz-main-padding);
+   bottom: var(--sz-main-padding);
+   user-select: none;
+
+   &__checkbox {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+   }
+
+   &__ru,
+   &__en {
+      cursor: pointer;
+      color: var(--clr-silver);
+      @include rfs(18px);
+      @media (min-width: 50em) {
+         @include rfs(14px);
+      }
+   }
+
+   &__checkbox:checked ~ &__en {
+     color: var(--clr-black);
+   }
+
+   &__checkbox:not(:checked) ~ &__ru {
+      color: var(--clr-black);
+   }
+
+  
+}
+

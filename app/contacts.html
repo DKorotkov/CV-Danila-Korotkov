@@ -6,14 +6,13 @@
       @@include('html/_header.html', {"pageNum": "4"})
       <aside class="aside"></aside>
       <main class="main contacts" id="main-content">
-         <h1 class="clipped main__header">Контакты</h1>
          <div class="container main__container">
             <div class="main__vertex contacts__vertex">
                <form class="form box-shadow" id="form">
-                  <h2 class="form__header">Отправить сообщение</h2>
+                  <h2 class="form__header" data-lang="">Отправить сообщение</h2>
                   <label class="form__label" for="input-name">
                      <input class="form__input" type="text" name="name" id="input-name" mozactionhint="next" maxlength="30" required />
-                     <span class="form__label-text">Имя</span>
+                     <span class="form__label-text" data-lang="">Имя</span>
                   </label>
                   <label class="form__label" for="input-email">
                      <input class="form__input" type="email" name="email" id="input-email" mozactionhint="next" maxlength="30" required />
@@ -21,15 +20,15 @@
                   </label>
                   <label class="form__label form__label--erea" for="input-meassage">
                      <textarea class="form__input form__textarea" name="message" id="input-meassage" mozactionhint="next" maxlength="150"></textarea>
-                     <span class="form__label-text">Сообщение</span>
+                     <span class="form__label-text" data-lang="">Сообщение</span>
                   </label>
                   <button class="btn form__btn" id="btnSendMail" type="submit" mozactionhint="send">
-                     <span class="msg__text">отправить</span>
+                     <span class="msg__text" data-lang="">отправить</span>
                      <div class="msg__inner">
-                        <div class="msg__ok" title="Сообщение отправлено">
+                        <div class="msg__ok" title="Сообщение отправлено" data-lang="title">
                            <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.33334 12.7143L9.56341 17L18.6667 7" stroke-linecap="round" /></svg>
                         </div>
-                        <div class="msg__error" title="Ошибка при отправке сообщения">
+                        <div class="msg__error" title="Ошибка при отправке сообщения" data-lang="title">
                            <?xml version="1.0" ?><svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
                               <path d="M19,37.44A18.44,18.44,0,1,1,37.44,19,18.461,18.461,0,0,1,19,37.44ZM19,3.06A15.94,15.94,0,1,0,34.94,19,15.958,15.958,0,0,0,19,3.06Z" />
                               <path d="M17.122,26.242a1.878,1.878 0 1,0 3.756,0a1.878,1.878 0 1,0 -3.756,0" />
@@ -41,11 +40,11 @@
                </form>
             </div>
             <div class="main__content">
-               <h1 class="main__header">Контакты</h1>
+               <h1 class="main__header" data-lang="">Контакты</h1>
                <div class="main__body contacts__body">
                   <ul class="contacts__list" role="list">
                      <li class="card box-shadow" role="listitem">
-                        <h3 class="card__header">Телефон</h3>
+                        <h3 class="card__header" data-lang="">Телефон</h3>
                         <a href="tel:+79213431395">8 (921) 343-1395</a>
                      </li>
                      <li class="card box-shadow" role="listitem">
@@ -53,8 +52,8 @@
                         <a href="mailto:danila.korotkov@gmail.com">danila.korotkov@gmail.com</a>
                      </li>
                      <li class="card box-shadow" role="listitem">
-                        <h3 class="card__header">Адрес</h3>
-                        <span>Санкт-Петербург, м. Проспект Славы</span>
+                        <h3 class="card__header" data-lang="">Адрес</h3>
+                        <span data-lang="">Санкт-Петербург, м. Проспект Славы</span>
                      </li>
                   </ul>
                </div>
