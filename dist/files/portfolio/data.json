@@ -1,0 +1,46 @@
+[{
+      "name": "Сайт дизайнерской компании",
+      "link": "https://dkorotkov.github.io/portfolio-design-company/",
+      "type": "portfolio",
+      "content": "Верстка макета компании, которая занимается дизайном помещений",
+      "more_info": "<b>Особенности</b><br>Добавлена мобильная версия, не предусмотренная макетом<br>Добавлена анимация (AOS)<br>Добавлен слайдер (a11y - slider)<br>Добавлена галерея изображений (собственная разработка)<br><br><b>Ресурс</b><br><a href='https://frontend-skills.com/template/0w50AZWvvEjOB26ACGiW' _blank>https://frontend-skills.com/</a>",
+      "img": "img/portfolio/Architecture & Interior - Main Page.png",
+      "createDate": "2022-08-25"
+   },
+   {
+      "name": "Анимация блоков",
+      "link": "https://dkorotkov.github.io/protfolio-imgs-offer-animation/",
+      "type": "fun",
+      "content": "Попытка сделать анимацю блоков, по примеру макета из инстаграм",
+      "more_info": "<b>Особенности</b><br>Использовал clip-path<br><br><b>Ресурс</b><br><a href='https://www.instagram.com/p/CiMyE-LjDSE/?igshid=MDE2OWE1N2Q=' _blank>@zhenya.ninja</a>",
+      "img": "img/portfolio/For Fun - Пример анимации для блока предложений.png",
+      "createDate": "2022-09-15"
+   },
+   {
+      "name": "Конструктор бургера",
+      "link": "https://dkorotkov.github.io/portfolio-make_your_burger/",
+      "type": "fun",
+      "content": "Верстка макета конструктора бургера",
+      "more_info": "<b>Особенности</b><br>Элементы (ингредиенты) добавялются автоматически из файла json.<br>Каждый из ингредиентов имеет свою стоимость, время приготовления, вес и количество калорий.<br><br><b>Ресурс</b><br><a href='https://frontend-skills.com/template/9mXx4YPAtxTtrGmAR1tO' _blank>https://frontend-skills.com/</a>",
+      "img": "img/portfolio/Make Your Burger - Main Page.png",
+      "createDate": "2022-09-08"
+   },
+   {
+      "name": "Галерея изображений",
+      "link": "https://dkorotkov.github.io/Ecwid-test-assessment/",
+      "type": "work",
+      "content": "Тестовое задание на должность Fullstack разработчик (PHP, React.js) в команду вебсайта для Эквид",
+      "more_info": "Стояла задача разработать страницу с галереей, которая поддерживает добавление изображений по ссылка или из файла",
+      "img": "img/portfolio/Ecwid test assessment (gallery).png",
+      "createDate": "2021-12-15"
+   },
+   {
+      "name": "Страница портфолио с анимацией",
+      "link": "https://dkorotkov.github.io/protfolio-cv-animation/",
+      "type": "fun",
+      "content": "Простой пример работы с аниацией страницы портфолио Макет взят на просторах Instagram",
+      "more_info": "<b>Особенности</b><br>Для анимации блоков был применен GSAP.",
+      "img": "img/portfolio/simple-portfolio.png",
+      "createDate": "2022-03-10"
+   }
+]
