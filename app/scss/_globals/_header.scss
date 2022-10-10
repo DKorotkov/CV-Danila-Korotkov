@@ -10,7 +10,7 @@
       background-color: transparent;
    }
 
-   &:has(.nav[aria-hidden="false"]) {
+   &:is(&--nav-active) {
       z-index: 50;
    }
 

@@ -53,10 +53,8 @@ picture {
       // grid-template-rows: 1fr;
    }
 
-   &:not(:has(.main__vertex)) {
-      --sz-aside-width: max(9.375rem,20%);
-   }
 }
+
 
 .fonts-loaded .body {
    font-family: var(--ff-body);

@@ -1,0 +1,5 @@
+.body {
+   &:not(:is(&--has-vertex)){
+      --sz-aside-width: max(9.375rem,20%);
+   }
+}

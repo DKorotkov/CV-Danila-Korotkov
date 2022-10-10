@@ -39,13 +39,13 @@
    // @@include('modules/_gallery.js')
    // ------------------------------------------------------------------------------------
 
-   // ------------При загрузки страницы---------------------
    let currentLang = navigator.language || navigator.userLanguage;
    currentLang = currentLang.indexOf("-") > 0 ? currentLang.substring(0, currentLang.indexOf("-")).toLowerCase() : currentLang.toLowerCase()
-
+   
    if (localStorage.getItem('currentLang')) currentLang = localStorage.getItem('currentLang')
    else localStorage.setItem('currentLang', currentLang);
-
+   
+   // ------------При загрузки страницы---------------------
    window.addEventListener('load', (event) => {
       const $aside = document.querySelector('.aside')
       const $loading = document.querySelector('.loading')
@@ -55,11 +55,11 @@
       })
       $aside.classList.add("aside--load")
 
-      // currentLang= 'en'
-      // if (currentLang !== 'ru') 
       setLang(currentLang)
-      
       // readLang()
+
+      const $vertex = document.querySelector(".main__vertex")
+      if ($vertex) document.querySelector(".body").classList.add("body--has-vertex")
       
        // --------------------------------Загрузка класса кастомизации Select----------------------
        @@include('modules/_select.js')
@@ -653,6 +653,7 @@
    // -----------Модальное окно-----------------------------
    const humburgerBtn = document.querySelector(".hamburger")
    const logo = document.querySelector(".header__logo")
+   const $header = document.querySelector(".header");
    const mainNav = new ModalDK({
       selector: ".nav",
       openBtnsSelector: ['.hamburger'],
@@ -661,11 +662,13 @@
          humburgerBtn.classList.add("is-active")
          humburgerBtn.setAttribute("aria-expanded","true")
          logo.classList.add("header__logo--active")
+         $header.classList.add("header--nav-active")
       },
       onClose() {
          humburgerBtn.classList.remove("is-active")
          humburgerBtn.setAttribute("aria-expanded", "false")
          logo.classList.remove("header__logo--active")
+         $header.classList.remove("header--nav-active");
       },
    })
    // ------------------------------------------------------
@@ -884,6 +887,9 @@
       
    }
 
+   // ------------------------------------------------------
+
+   // --------------Смена языка-----------------------------
    const langSwitch = document.querySelector("#lang-switch")
    if (currentLang === 'en') langSwitch.checked = true
    langSwitch.addEventListener("click", () => {
@@ -893,5 +899,6 @@
       setLang(currentLang)
    })
    // ------------------------------------------------------
+   
    
    })()
