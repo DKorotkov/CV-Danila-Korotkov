@@ -19,9 +19,9 @@
    
    <meta name="format-detection" content="telephone=no">
    
-   <meta name="description" content="Сайт портфолио front-end разработчика Данилы Короткова ">
+   <meta name="description" content="Сайт портфолио front-end разработчика Данилы Короткова " data-lang="content">
    
-   <meta name="keywords" content="front-end, фронт, разработка, web, вэб, веб, создание сайтов, junior, html, js, wordpress">
+   <meta name="keywords" content="front-end, фронт, разработка, web, вэб, веб, создание сайтов, junior, html, js, wordpress" data-lang="content">
 
    
    
@@ -32,37 +32,37 @@
    
 
    
-   <meta name="Author" content="Данила Коротков ">
+   <meta name="Author" content="Данила Коротков " data-lang="content">
    
-   <meta name="Copyright" content=" Данила Коротков ">
+   <meta name="Copyright" content=" Данила Коротков " data-lang="content">
    
    <meta name="Address" content="danila.korotkov@gmail.com">
 
    
    
-   <meta property="og:locale" content="ru_RU">
+   <meta property="og:locale" content="ru_RU" data-lang="content">
    
    <meta property="og:type" content="article">
    
-   <meta property="og:title" content="Портфолио">
+   <meta property="og:title" content="Портфолио" data-lang="content">
    
-   <meta property="og:description" content="Сайт портфолио front-end разработчика Данилы Короткова ">
+   <meta property="og:description" content="Сайт портфолио front-end разработчика Данилы Короткова " data-lang="content">
    
    <meta property="og:image" content="https://dkorotkov.github.io/img/logo.png">
    
    <meta property="og:url" content="/">
    
-   <meta property="og:site_name" content="Данила Коротков CV">
+   <meta property="og:site_name" content="Данила Коротков CV" data-lang="content">
 
    
    
-   <meta name="twitter:card" content="summary">
+   <meta name="twitter:card" content="summary" data-lang="content">
    
-   <meta name="twitter:site" content="Данила Коротков ">
+   <meta name="twitter:site" content="Данила Коротков " data-lang="content">
    
-   <meta name="twitter:title" content="Портфолио">
+   <meta name="twitter:title" content="Портфолио" data-lang="content">
    
-   <meta name="twitter:description" content="Сайт портфолио front-end разработчика Данилы Короткова ">
+   <meta name="twitter:description" content="Сайт портфолио front-end разработчика Данилы Короткова " data-lang="content">
    
    <meta name="twitter:image" content="https://dkorotkov.github.io/img/logo.png">
 
@@ -88,53 +88,58 @@
          html.classList.add("fonts-loaded");
       }
    </script>
-   <title>Данила Коротков CV | Портфолио</title>
+   <title data-lang="">Данила Коротков CV | Портфолио</title>
 </head>
 
    <body class="body">
       <header class="header">
-   <a class="skip-nav-link" href="#main-content">Пропустить навигацию</a>
+   <a class="skip-nav-link" href="#main-content" data-lang="">Пропустить навигацию</a>
    <div class="container header__conatiner">
       <a class="header__logo" href="/">dk</a>
-      <button class="hamburger hamburger--squeeze header__btn" type="button" aria-label="Открыть основную навгацию" aria-controls="navigation" aria-expanded="false">
+      <button class="hamburger hamburger--squeeze header__btn" type="button" aria-label="Открыть основную навгацию" aria-controls="navigation" aria-expanded="false" data-lang="aria">
          <span class="hamburger-box">
             <span class="hamburger-inner"></span>
          </span>
       </button>
    </div>
-   <nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden>
+   <nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden data-lang="aria">
       <ul class="nav__box" role="list" data-current="2">
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/">Обо мне</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/portfolio.html">Портфолио</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/resume.html">Резюме</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/contacts.html">Контакты</a></li>
+         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/" data-lang="">Обо мне</a></li>
+         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/portfolio.html" data-lang="">Портфолио</a></li>
+         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/resume.html" data-lang="">Резюме</a></li>
+         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/contacts.html" data-lang="">Контакты</a></li>
       </ul>
+      <label class="lang-switch" for="lang-switch">
+         <input id="lang-switch" class="lang-switch__checkbox" type="checkbox">
+         <span class="lang-switch__ru">ru</span>
+         <span class="lang-switch__en">en</span>
+      </label>
    </nav>
 </header>
-<div class="loading">Загрузка...</div>
+<div class="loading" data-lang="">Загрузка...</div>
 
       <aside class="aside"></aside>
       <main class="main" id="main-content">
-         <h1 class="main__header">Портфолио</h1>
+         <h1 class="main__header" data-lang="">Портфолио</h1>
          <div class="container main__container">
             <div class="portfolio main__content">
                <div class="main__body">
                   <div class="portfolio__options options">
                      <div class="options__item">
-                        <label class="options__label clipped" for="select-date">Сортировать по дате</label>
+                        <label class="options__label clipped" for="select-date" data-lang="">Сортировать по дате</label>
                         <select class="options__select" id="select-date" name="createDate" data-type="sort">
-                           <option value="new">Сначала новые</option>
-                           <option value="old">Сначала старые</option>
-                           <option value="random">В случайном порядке</option>
+                           <option value="new" data-lang="">Сначала новые</option>
+                           <option value="old" data-lang="">Сначала старые</option>
+                           <option value="random" data-lang="">В случайном порядке</option>
                         </select>
                      </div>
                      <div class="options__item">
-                        <label class="options__label clipped" for="select-type">Сортировать по типу</label>
+                        <label class="options__label clipped" for="select-type" data-lang="">Сортировать по типу</label>
                         <select class="options__select" id="select-type" name="type" data-type="filter">
-                           <option value="all">Все</option>
+                           <option value="all" data-lang="">Все</option>
                            <option value="fun">For fun</option>
-                           <option value="portfolio">Портфолио</option>
-                           <option value="work">Работа</option>
+                           <option value="portfolio" data-lang="">Портфолио</option>
+                           <option value="work" data-lang="">Работа</option>
                         </select>
                      </div>
                   </div>
@@ -151,7 +156,7 @@
                   <p class="portfolio__content"></p>
                   <p class="portfolio__more-info"></p>
                </div>
-               <a class="portfolio__link" href="#" title="Открыть проект в новом окне" target="_blank">
+               <a class="portfolio__link" href="#" title="Открыть проект в новом окне" target="_blank" data-lang="title">
                   <svg class="portfolio__link-icon" role="img"><use xlink:href="img/icons/icons.svg#arrow-right"></use></svg>
                </a>
             </li>
@@ -166,36 +171,36 @@
          </div>
 
          <div class="footer__contact contact" role="listitem">
-            <dt class="contact__term">Телефон</dt>
+            <dt class="contact__term" data-lang="">Телефон</dt>
             <dd class="contact__definition"><a class="contact__link" href="tel:+79213431395">8 (921) 343 1395</a></dd>
          </div>
 
          <div class="footer__contact contact" role="listitem">
-            <dt class="contact__term">Социальные сети</dt>
+            <dt class="contact__term" data-lang="">Социальные сети</dt>
             <dd class="contact__definition">
                <ul class="contact__soicals">
                   <li class="contact__soicals-item">
-                     <a href="https://github.com/DKorotkov" aria-label="Профиль на GitHub" target="_blank">
+                     <a href="https://github.com/DKorotkov" aria-label="Профиль на GitHub" target="_blank" data-lang="aria">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#github"></use></svg>
                      </a>
                   </li>
                   <li class="contact__soicals-item">
-                     <a href="https://danila-korotkov.gitbook.io/front-end-patterns/" aria-label="Профиль на GitBook" target="_blank">
+                     <a href="https://danila-korotkov.gitbook.io/front-end-patterns/" aria-label="Профиль на GitBook" target="_blank" data-lang="aria">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#gitbook"></use></svg>
                      </a>
                   </li>
                   <li class="contact__soicals-item">
-                     <a href="https://instagram.com/doubleddan" aria-label="Профиль в instagram" target="_blank">
+                     <a href="https://instagram.com/doubleddan" aria-label="Профиль в instagram" target="_blank" data-lang="aria">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#instagram"></use></svg>
                      </a>
                   </li>
                   <li class="contact__soicals-item">
-                     <a href="https://wa.me/79213431395" aria-label="Связаться через whatsapp" target="_blank">
+                     <a href="https://wa.me/79213431395" aria-label="Связаться через whatsapp" target="_blank" data-lang="aria">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#whatsapp"></use></svg>
                      </a>
                   </li>
                   <li class="contact__soicals-item">
-                     <a href="https://telegram.me/Korotkov_D" aria-label="Связаться через telegram" target="_blank">
+                     <a href="https://telegram.me/Korotkov_D" aria-label="Связаться через telegram" target="_blank" data-lang="aria">
                         <svg class="contact__icon" role="img"><use xlink:href="img/icons/icons.svg#telegram"></use></svg>
                      </a>
                   </li>
