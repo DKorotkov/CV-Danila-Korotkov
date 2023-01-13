@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
-   <!-- prettier-ignore -->
-   @@include('html/_head.html', { "description": "Сайт портфолио front-end разработчика Данилы Короткова", "keywords": "front-end, фронт, разработка, web, вэб, веб, создание сайтов, junior, html, js, wordpress", "title": "Обо мне", "site_name": "Данила Коротков CV", "socials": { "autor": "Данила Коротков", "copyright": "Данила Коротков", "adress": "danila.korotkov@gmail.com", "image": "https://dkorotkov.github.io/img/logo.png", "link": "/", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
-   <body class="body">
-      @@include('html/_header.html', {"pageNum": "1"})
-      <aside class="aside"></aside>
-      <main class="main" id="main-content">
-         <h1 class="clipped main__header" data-lang="">Обо мне</h1>
-         <div class="container main__container">
-            <div class="main__vertex box-shadow">
-               <img src="img/dk.jpg" alt="Фотография Данилы Короткова" data-lang="alt" />
-            </div>
-            <div class="about main__content">
-               <div class="main__body">
-                  <h2 class="about__header" data-lang="html">Данила <em class="about__header-accent">Коротков</em></h2>
-                  <span class="about__job" data-lang="">Front-End разработчик</span>
-                  <p class="about__inforamtion" data-lang="">Привет, Мир! Живу в Санкт-Петербурге, люблю веб и верю в лучшее.</p>
-                  <dl class="about__stack">
-                     <dt data-lang="">Мой основной стэк:</dt>
-                     <dd>
-                        <ul class="about__stack-list">
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label="html"><use xlink:href="img/icons/icons-color.svg#html"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label="js"><use xlink:href="img/icons/icons-color.svg#js"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label="sass"><use xlink:href="img/icons/icons-color.svg#sass"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label="gulp"><use xlink:href="img/icons/icons-color.svg#gulp"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <svg class="about__stack-icon" role="img" aria-label="wordpress cms"><use xlink:href="img/icons/icons-color.svg#wp"></use></svg>
-                           </li>
-                           <li class="about__stack-item">
-                              <img src="img/ghost-logo-orb.png" aria-label="ghost cms" alt="ghost cms" />
-                           </li>
-                        </ul>
-                     </dd>
-                  </dl>
-                  <ul class="about__fast-links" role="list" aria-label="Быстрые ссылки" data-lang="aria">
-                     <li class="about__fast-link" role="listitem">
-                        <a class="btn" href="/portfolio.html" data-lang="">портфолио</a>
-                     </li>
-                     <li class="about__fast-link" role="listitem">
-                        <a class="btn btn--trns" href="/resume.html" data-lang="">резюме</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </main>
-      @@include('html/_footer.html') @@include('html/_scripts.html')
-   </body>
+	<!-- prettier-ignore -->
+	@@include('html/_head.html', { "description": "Сайт портфолио front-end разработчика Данилы Короткова", "keywords": "front-end, фронт, разработка, web, вэб, веб, создание сайтов, junior, html, js, wordpress", "title": "Обо мне", "site_name": "Данила Коротков CV", "socials": { "autor": "Данила Коротков", "copyright": "Данила Коротков", "adress": "danila.korotkov@gmail.com", "image": "https://dkorotkov.github.io/img/logo.png", "link": "/", "fb": "facebook.com/include", "tw": "twitter.com/include" } })
+	<body class="body">
+		@@include('html/_header.html', {"pageNum": "1"})
+		<aside class="aside"></aside>
+		<main class="main" id="main-content">
+			<h1 class="clipped main__header" data-lang="">Обо мне</h1>
+			<div class="container main__container">
+				<div class="main__vertex box-shadow">
+					<img src="img/dk.jpg" alt="Фотография Данилы Короткова" data-lang="alt" />
+				</div>
+				<div class="about main__content">
+					<div class="main__body">
+						<h2 class="about__header" data-lang="html">Данила <em class="about__header-accent">Коротков</em></h2>
+						<span class="about__job" data-lang="">Front-End разработчик</span>
+						<p class="about__inforamtion" data-lang="">Привет, Мир! Живу в Санкт-Петербурге, люблю веб и верю в лучшее.</p>
+						<dl class="about__stack">
+							<dt data-lang="">Мой основной стэк:</dt>
+							<dd>
+								<ul class="about__stack-list">
+									<li class="about__stack-item">
+										<svg class="about__stack-icon" role="img" title="html">
+											<use xlink:href="img/icons/icons-color.svg#html"></use>
+										</svg>
+									</li>
+									<li class="about__stack-item">
+										<svg class="about__stack-icon" role="img" title="js">
+											<use xlink:href="img/icons/icons-color.svg#js"></use>
+										</svg>
+									</li>
+									<li class="about__stack-item">
+										<svg class="about__stack-icon" role="img" title="sass">
+											<use xlink:href="img/icons/icons-color.svg#sass"></use>
+										</svg>
+									</li>
+									<li class="about__stack-item">
+										<svg class="about__stack-icon" role="img" title="gulp">
+											<use xlink:href="img/icons/icons-color.svg#gulp"></use>
+										</svg>
+									</li>
+									<li class="about__stack-item">
+										<svg class="about__stack-icon" role="img" title="wordpress cms">
+											<use xlink:href="img/icons/icons-color.svg#wp"></use>
+										</svg>
+									</li>
+									<li class="about__stack-item">
+										<img src="img/ghost-logo-orb.png" title="ghost cms" alt="ghost cms" />
+									</li>
+									<li class="about__stack-item">
+										<svg class="about__stack-icon" role="img" title="React">
+											<use xlink:href="img/icons/icons-color.svg#react"></use>
+										</svg>
+									</li>
+									<li class="about__stack-item">
+										<svg class="about__stack-icon" role="img" title="TypeScript">
+											<use xlink:href="img/icons/icons-color.svg#typescript"></use>
+										</svg>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<ul class="about__fast-links" role="list" aria-label="Быстрые ссылки" data-lang="aria">
+							<li class="about__fast-link" role="listitem">
+								<a class="btn" href="/portfolio.html" data-lang="">портфолио</a>
+							</li>
+							<li class="about__fast-link" role="listitem">
+								<a class="btn btn--trns" href="/resume.html" data-lang="">резюме</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.html') @@include('html/_scripts.html')
+	</body>
 </html>
-
-<!-- 
--->
