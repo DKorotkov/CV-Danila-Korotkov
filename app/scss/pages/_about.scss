@@ -34,6 +34,7 @@
 
    &__stack-list {
       display: flex;
+      flex-wrap: wrap;
       gap: rem(10);
       padding-top: var(--space-sm);
    }
