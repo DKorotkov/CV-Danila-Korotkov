@@ -124,6 +124,10 @@ const langObjFooter = {
 			ru: 'Профиль на GitHub',
 			en: 'GITHUB profile',
 		},
+		Profil_na_Linkedin: {
+			ru: 'Профиль на Linkedin',
+			en: 'Linkedin profile',
+		},
 		Profil_na_GitBook: {
 			ru: 'Профиль на GitBook',
 			en: 'GitBook profile',
@@ -156,6 +160,10 @@ const langObjIndex = {
 		'Privet,_Mir!_Jivu_v_Sankt': {
 			ru: 'Привет, Мир! Живу в Санкт-Петербурге, люблю веб и верю в лучшее.',
 			en: 'Hello World! I live in St. Petersburg, I love web and believe in the best.',
+		},
+		Vam_nujen_sdelat_sait_ili: {
+			ru: 'Вам нужен сделать сайт или внести изменения в текущий? Дайте знать!',
+			en: 'Do you need to make a website or make changes to the current one? Let me know!',
 		},
 		'Moi_osnovnoi_stek:': {
 			ru: 'Мой основной стэк:',
