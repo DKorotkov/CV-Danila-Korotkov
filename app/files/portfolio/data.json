@@ -42,5 +42,14 @@
       "more_info": "<b>Особенности</b><br>Для анимации блоков был применен GSAP.",
       "img": "img/portfolio/simple-portfolio.png",
       "createDate": "2022-03-10"
+   },
+   {
+      "name": "Медицинская клиника Angel",
+      "link": "https://angel-clinic.ru/",
+      "type": "work",
+      "content": "Сайт был запущен, но не доведен до совершенства по причине отсутсвия желания развивать проект со стороны заказчика",
+      "more_info": "<b>Особенности</b><br>CMS WordPress",
+      "img": "img/portfolio/angel-clinic.ru.png",
+      "createDate": "2022-06-10"
    }
 ]
