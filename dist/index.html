@@ -120,28 +120,36 @@
 
 	<body class="body">
 		<header class="header">
-   <a class="skip-nav-link" href="#main-content" data-lang="">Пропустить навигацию</a>
-   <div class="container header__conatiner">
-      <a class="header__logo" href="/">dk</a>
-      <button class="hamburger hamburger--squeeze header__btn" type="button" aria-label="Открыть основную навгацию" aria-controls="navigation" aria-expanded="false" data-lang="aria">
-         <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-         </span>
-      </button>
-   </div>
-   <nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden data-lang="aria">
-      <ul class="nav__box" role="list" data-current="1">
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/" data-lang="">Обо мне</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/portfolio.html" data-lang="">Портфолио</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/resume.html" data-lang="">Резюме</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/contacts.html" data-lang="">Контакты</a></li>
-      </ul>
-      <label class="lang-switch" for="lang-switch">
-         <input id="lang-switch" class="lang-switch__checkbox" type="checkbox">
-         <span class="lang-switch__ru">ru</span>
-         <span class="lang-switch__en">en</span>
-      </label>
-   </nav>
+	<a class="skip-nav-link" href="#main-content" data-lang="">Пропустить навигацию</a>
+	<div class="container header__conatiner">
+		<a class="header__logo" href="/">dk</a>
+		<button class="hamburger hamburger--squeeze header__btn" type="button" aria-label="Открыть основную навгацию" aria-controls="navigation" aria-expanded="false" data-lang="aria">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+	</div>
+	<nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden data-lang="aria">
+		<ul class="nav__box" role="list" data-current="1" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/" data-lang="" itemprop="url">Обо мне</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/portfolio.html" data-lang="" itemprop="url">Портфолио</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/resume.html" data-lang="" itemprop="url">Резюме</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/contacts.html" data-lang="" itemprop="url">Контакты</a>
+			</li>
+		</ul>
+		<label class="lang-switch" for="lang-switch">
+			<input id="lang-switch" class="lang-switch__checkbox" type="checkbox">
+			<span class="lang-switch__ru">ru</span>
+			<span class="lang-switch__en">en</span>
+		</label>
+	</nav>
 </header>
 <div class="loading" data-lang="">Загрузка...</div>
 
@@ -153,11 +161,11 @@
 					<picture><source srcset="img/dk.webp" type="image/webp"><img src="img/dk.jpg" alt="Фотография Данилы Короткова" data-lang="alt"></picture>
 				</div>
 				<div class="about main__content">
-					<div class="main__body">
-						<h2 class="about__header" data-lang="html">Данила <em class="about__header-accent">Коротков</em></h2>
+					<div class="main__body" itemscope itemtype="http://schema.org/WPHeader">
+						<h2 class="about__header" data-lang="html" itemprop="name">Данила <em class="about__header-accent">Коротков</em></h2>
 						<span class="about__job" data-lang="">Front-End разработчик</span>
-						<p class="about__inforamtion" data-lang="">Привет, Мир! Живу в Санкт-Петербурге, люблю веб и верю в лучшее.</p>
-						<p data-lang="">Вам нужно сделать сайт или внести изменения в текущий? Дайте знать!</p>
+						<p class="about__inforamtion" data-lang="">Привет!</p>
+						<p data-lang="" itemprop="description">Вам нужно сделать сайт или внести изменения в текущий? Дайте знать!</p>
 						<dl class="about__stack">
 							<dt data-lang="">Мой основной стэк:</dt>
 							<dd>

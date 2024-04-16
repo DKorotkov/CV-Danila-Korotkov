@@ -120,28 +120,36 @@
 
    <body class="body">
       <header class="header">
-   <a class="skip-nav-link" href="#main-content" data-lang="">Пропустить навигацию</a>
-   <div class="container header__conatiner">
-      <a class="header__logo" href="/">dk</a>
-      <button class="hamburger hamburger--squeeze header__btn" type="button" aria-label="Открыть основную навгацию" aria-controls="navigation" aria-expanded="false" data-lang="aria">
-         <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-         </span>
-      </button>
-   </div>
-   <nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden data-lang="aria">
-      <ul class="nav__box" role="list" data-current="3">
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/" data-lang="">Обо мне</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/portfolio.html" data-lang="">Портфолио</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/resume.html" data-lang="">Резюме</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/contacts.html" data-lang="">Контакты</a></li>
-      </ul>
-      <label class="lang-switch" for="lang-switch">
-         <input id="lang-switch" class="lang-switch__checkbox" type="checkbox">
-         <span class="lang-switch__ru">ru</span>
-         <span class="lang-switch__en">en</span>
-      </label>
-   </nav>
+	<a class="skip-nav-link" href="#main-content" data-lang="">Пропустить навигацию</a>
+	<div class="container header__conatiner">
+		<a class="header__logo" href="/">dk</a>
+		<button class="hamburger hamburger--squeeze header__btn" type="button" aria-label="Открыть основную навгацию" aria-controls="navigation" aria-expanded="false" data-lang="aria">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+	</div>
+	<nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden data-lang="aria">
+		<ul class="nav__box" role="list" data-current="3" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/" data-lang="" itemprop="url">Обо мне</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/portfolio.html" data-lang="" itemprop="url">Портфолио</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/resume.html" data-lang="" itemprop="url">Резюме</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/contacts.html" data-lang="" itemprop="url">Контакты</a>
+			</li>
+		</ul>
+		<label class="lang-switch" for="lang-switch">
+			<input id="lang-switch" class="lang-switch__checkbox" type="checkbox">
+			<span class="lang-switch__ru">ru</span>
+			<span class="lang-switch__en">en</span>
+		</label>
+	</nav>
 </header>
 <div class="loading" data-lang="">Загрузка...</div>
 

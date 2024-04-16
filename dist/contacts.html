@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-   
-   <head>
+	
+	<head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width,initial-scale=1">
    
@@ -118,90 +118,101 @@
    <meta name="yandex-verification" content="903e2283603d43f3">
 </head>
 
-   <body class="body">
-      <header class="header">
-   <a class="skip-nav-link" href="#main-content" data-lang="">Пропустить навигацию</a>
-   <div class="container header__conatiner">
-      <a class="header__logo" href="/">dk</a>
-      <button class="hamburger hamburger--squeeze header__btn" type="button" aria-label="Открыть основную навгацию" aria-controls="navigation" aria-expanded="false" data-lang="aria">
-         <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-         </span>
-      </button>
-   </div>
-   <nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden data-lang="aria">
-      <ul class="nav__box" role="list" data-current="4">
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/" data-lang="">Обо мне</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/portfolio.html" data-lang="">Портфолио</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/resume.html" data-lang="">Резюме</a></li>
-         <li class="nav__item" role="listitem"><a class="nav__link text-decration" href="/contacts.html" data-lang="">Контакты</a></li>
-      </ul>
-      <label class="lang-switch" for="lang-switch">
-         <input id="lang-switch" class="lang-switch__checkbox" type="checkbox">
-         <span class="lang-switch__ru">ru</span>
-         <span class="lang-switch__en">en</span>
-      </label>
-   </nav>
+	<body class="body">
+		<header class="header">
+	<a class="skip-nav-link" href="#main-content" data-lang="">Пропустить навигацию</a>
+	<div class="container header__conatiner">
+		<a class="header__logo" href="/">dk</a>
+		<button class="hamburger hamburger--squeeze header__btn" type="button" aria-label="Открыть основную навгацию" aria-controls="navigation" aria-expanded="false" data-lang="aria">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+	</div>
+	<nav id="navigation" class="header__nav nav" aria-label="Главная навигация" hidden data-lang="aria">
+		<ul class="nav__box" role="list" data-current="4" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/" data-lang="" itemprop="url">Обо мне</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/portfolio.html" data-lang="" itemprop="url">Портфолио</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/resume.html" data-lang="" itemprop="url">Резюме</a>
+			</li>
+			<li class="nav__item" role="listitem" itemprop="name">
+				<a class="nav__link text-decration" href="/contacts.html" data-lang="" itemprop="url">Контакты</a>
+			</li>
+		</ul>
+		<label class="lang-switch" for="lang-switch">
+			<input id="lang-switch" class="lang-switch__checkbox" type="checkbox">
+			<span class="lang-switch__ru">ru</span>
+			<span class="lang-switch__en">en</span>
+		</label>
+	</nav>
 </header>
 <div class="loading" data-lang="">Загрузка...</div>
 
-      <aside class="aside"></aside>
-      <main class="main contacts" id="main-content">
-         <div class="container main__container">
-            <div class="main__vertex contacts__vertex">
-               <form class="form box-shadow" id="form">
-                  <h2 class="form__header" data-lang="">Отправить сообщение</h2>
-                  <label class="form__label" for="input-name">
-                     <input class="form__input" type="text" name="name" id="input-name" mozactionhint="next" maxlength="30" required>
-                     <span class="form__label-text" data-lang="">Имя</span>
-                  </label>
-                  <label class="form__label" for="input-email">
-                     <input class="form__input" type="email" name="email" id="input-email" mozactionhint="next" maxlength="30" required>
-                     <span class="form__label-text">Email</span>
-                  </label>
-                  <label class="form__label form__label--erea" for="input-meassage">
-                     <textarea class="form__input form__textarea" name="message" id="input-meassage" mozactionhint="next" maxlength="150"></textarea>
-                     <span class="form__label-text" data-lang="">Сообщение</span>
-                  </label>
-                  <button class="btn form__btn" id="btnSendMail" type="submit" mozactionhint="send">
-                     <span class="msg__text" data-lang="">отправить</span>
-                     <div class="msg__inner">
-                        <div class="msg__ok" title="Сообщение отправлено" data-lang="title">
-                           <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.33334 12.7143L9.56341 17L18.6667 7" stroke-linecap="round"/></svg>
-                        </div>
-                        <div class="msg__error" title="Ошибка при отправке сообщения" data-lang="title">
-                           <?xml version="1.0" ?><svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M19,37.44A18.44,18.44,0,1,1,37.44,19,18.461,18.461,0,0,1,19,37.44ZM19,3.06A15.94,15.94,0,1,0,34.94,19,15.958,15.958,0,0,0,19,3.06Z"/>
-                              <path d="M17.122,26.242a1.878,1.878 0 1,0 3.756,0a1.878,1.878 0 1,0 -3.756,0"/>
-                              <path d="M18.969,21.569h0a1.2,1.2,0,0,1-1.2-1.145l-.425-8.883A1.652,1.652,0,0,1,19,9.82h0a1.652,1.652,0,0,1,1.65,1.731l-.487,8.881A1.2,1.2,0,0,1,18.969,21.569Z"/>
-                           </svg>
-                        </div>
-                     </div>
-                  </button>
-               </form>
-            </div>
-            <div class="main__content">
-               <h1 class="main__header" data-lang="">Контакты</h1>
-               <div class="main__body contacts__body">
-                  <ul class="contacts__list" role="list">
-                     <li class="card box-shadow" role="listitem">
-                        <h3 class="card__header" data-lang="">Телефон</h3>
-                        <a href="tel:+79213431395">8 (921) 343-1395</a>
-                     </li>
-                     <li class="card box-shadow" role="listitem">
-                        <h3 class="card__header">Email</h3>
-                        <a href="mailto:danila.korotkov@gmail.com">danila.korotkov@gmail.com</a>
-                     </li>
-                     <li class="card box-shadow" role="listitem">
-                        <h3 class="card__header" data-lang="">Адрес</h3>
-                        <span data-lang="">Санкт-Петербург, м. Проспект Славы</span>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </main>
-      <footer class="footer">
+		<aside class="aside"></aside>
+		<main class="main contacts" id="main-content">
+			<div class="container main__container">
+				<div class="main__vertex contacts__vertex">
+					<form class="form box-shadow" id="form">
+						<h2 class="form__header" data-lang="">Отправить сообщение</h2>
+						<label class="form__label" for="input-name">
+							<input class="form__input" type="text" name="name" id="input-name" mozactionhint="next" maxlength="30" required>
+							<span class="form__label-text" data-lang="">Имя</span>
+						</label>
+						<label class="form__label" for="input-email">
+							<input class="form__input" type="email" name="email" id="input-email" mozactionhint="next" maxlength="30" required>
+							<span class="form__label-text">Email</span>
+						</label>
+						<label class="form__label form__label--erea" for="input-meassage">
+							<textarea class="form__input form__textarea" name="message" id="input-meassage" mozactionhint="next" maxlength="150"></textarea>
+							<span class="form__label-text" data-lang="">Сообщение</span>
+						</label>
+						<button class="btn form__btn" id="btnSendMail" type="submit" mozactionhint="send">
+							<span class="msg__text" data-lang="">отправить</span>
+							<div class="msg__inner">
+								<div class="msg__ok" title="Сообщение отправлено" data-lang="title">
+									<?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.33334 12.7143L9.56341 17L18.6667 7" stroke-linecap="round"/></svg>
+								</div>
+								<div class="msg__error" title="Ошибка при отправке сообщения" data-lang="title">
+									<?xml version="1.0" ?><svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+										<path d="M19,37.44A18.44,18.44,0,1,1,37.44,19,18.461,18.461,0,0,1,19,37.44ZM19,3.06A15.94,15.94,0,1,0,34.94,19,15.958,15.958,0,0,0,19,3.06Z"/>
+										<path d="M17.122,26.242a1.878,1.878 0 1,0 3.756,0a1.878,1.878 0 1,0 -3.756,0"/>
+										<path d="M18.969,21.569h0a1.2,1.2,0,0,1-1.2-1.145l-.425-8.883A1.652,1.652,0,0,1,19,9.82h0a1.652,1.652,0,0,1,1.65,1.731l-.487,8.881A1.2,1.2,0,0,1,18.969,21.569Z"/>
+									</svg>
+								</div>
+							</div>
+						</button>
+					</form>
+				</div>
+
+				<div class="main__content">
+					<h1 class="main__header" data-lang="">Контакты</h1>
+					<div class="main__body contacts__body" itemscope itemtype="http://schema.org/Person">
+						<ul class="contacts__list" role="list">
+							<li class="card box-shadow" role="listitem">
+								<h3 class="card__header" data-lang="">Телефон</h3>
+								<a href="tel:+79213431395" itemprop="telephone">8 (921) 343-1395</a>
+							</li>
+							<li class="card box-shadow" role="listitem">
+								<h3 class="card__header">Email</h3>
+								<a href="mailto:danila.korotkov@gmail.com" itemprop="email">danila.korotkov@gmail.com</a>
+							</li>
+							<li class="card box-shadow" role="listitem" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+								<h3 class="card__header" data-lang="">Адрес</h3>
+								<span data-lang="" itemprop="addressRegion">Санкт-Петербург</span>
+								<span>,</span>
+								<span data-lang="" itemprop="streetAddress">м. Проспект Славы</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
 	<div class="container footer__container">
 		<dl class="footer__contacts" role="list">
 			<div class="footer__contact contact" role="listitem">
@@ -265,5 +276,5 @@
 
 <script src="js/script.min.js"></script>
 
-   </body>
+	</body>
 </html>
