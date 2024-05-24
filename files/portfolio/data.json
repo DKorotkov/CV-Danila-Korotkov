@@ -51,5 +51,13 @@
       "more_info": "<b>Особенности</b><br>CMS WordPress",
       "img": "img/portfolio/angel-clinic.ru.png",
       "createDate": "2023-06-10"
+   }, {
+      "name": "Сайт кафе",
+      "link": "https://dkorotkov.github.io/portfolio-cafe/",
+      "type": "portfolio",
+      "content": "Верстка многостраничного сайта кафе.",
+      "more_info": "<b>Особенности</b><br>Добавлена мобильная версия, не предусмотренная макетом.<br>Добавлена светлая тема с переключателем в навгиции.<br>Добавлен container grid для создания элементов выходящих за границы контейнера.",
+      "img": "img/portfolio/Cafe-Home.png",
+      "createDate": "2024-05-24"
    }
 ]
