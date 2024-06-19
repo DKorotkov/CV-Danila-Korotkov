@@ -177,6 +177,18 @@ const langObjIndex = {
 			ru: 'резюме',
 			en: 'summary',
 		},
+		'Privet!': {
+			ru: 'Привет!',
+			en: 'Hi!',
+		},
+		Vam_nujno_sdelat_sait_ili: {
+			ru: 'Вам нужно сделать сайт или внести изменения в текущий?',
+			en: 'Do you need to make a website or make changes to the current one?',
+		},
+		'Daite_znat!': {
+			ru: 'Дайте знать!',
+			en: 'Let me know!',
+		},
 	},
 	alt: {
 		Fotografiya_Danily_Korotk: {
@@ -228,9 +240,13 @@ const langObjContacts = {
 			ru: 'Адрес',
 			en: 'Address',
 		},
-		'Sankt-Peterburg,_m._Prosp': {
-			ru: 'Санкт-Петербург, м. Проспект Славы',
-			en: 'St. Petersburg, metro st. Prospect Glory',
+		'Sankt-Peterburg': {
+			ru: 'Санкт-Петербург',
+			en: 'St. Petersburg',
+		},
+		'm._Prospekt_Slavy': {
+			ru: 'м. Проспект Славы',
+			en: 'metro st. Prospect Glory',
 		},
 	},
 	title: {
@@ -322,8 +338,8 @@ const langObjResume = {
 			ru: 'РАБОТА',
 			en: 'Work',
 		},
-		FGUP_Pochta_Rossii: {
-			ru: 'ФГУП Почта России',
+		Pochta_Rossii: {
+			ru: 'Почта России',
 			en: 'Russian Post',
 		},
 		Elektromehanik: {
@@ -341,6 +357,14 @@ const langObjResume = {
 		'2016_-_po_n.v.': {
 			ru: '2016 - по н.в.',
 			en: '2016 - until now',
+		},
+		SERTIFIKATY: {
+			ru: 'СЕРТИФИКАТЫ',
+			en: 'CERTIFICATES',
+		},
+		'1C_Bitrix_Kontent-menedje': {
+			ru: '1C Bitrix Контент-менеджер',
+			en: '1C Bitrix Content Manager',
 		},
 	},
 }
@@ -387,6 +411,22 @@ const langObjPortfolioWorks = {
 			ru: 'Тестовое задание на должность Fullstack разработчик (PHP, React.js) в команду вебсайта для Эквид',
 			en: 'Test task for the position of Fullstack Developer (PHP, React.js) in the team of the website for Equid',
 		},
+		Sait_kafe: {
+			ru: 'Сайт кафе',
+			en: 'Cafe website',
+		},
+		Verstka_mnogostranichnogo: {
+			ru: 'Верстка многостраничного сайта кафе.',
+			en: 'Layout of the cafe`s multipage website',
+		},
+		Medicinskaya_klinika_Ange: {
+			ru: 'Медицинская клиника Angel',
+			en: '"Angel" Medical Clinic',
+		},
+		'Sait_byl_zapushchen,_no_n': {
+			ru: 'Сайт был запущен, но не доведен до финальной стадии',
+			en: 'The site was launched, but not brought to the final stage',
+		},
 	},
 	html: {
 		'<b>Osobennosti</b><br>Isp': {
@@ -408,6 +448,10 @@ const langObjPortfolioWorks = {
 		Stoyala_zadacha_razrabota: {
 			ru: 'Стояла задача разработать страницу с галереей, которая поддерживает добавление изображений по ссылка или из файла',
 			en: 'The task was to develop a page with a gallery that supports adding images by link or from a file',
+		},
+		'<b>Osobennosti</b><br>CMS': {
+			ru: 'CMS WordPress',
+			en: 'CMS WordPress',
 		},
 	},
 }
