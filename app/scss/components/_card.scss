@@ -8,6 +8,10 @@
    gap: rem(3);
    justify-content: flex-start;
 
+   &--center {
+      justify-content: center;
+   }
+
    &:not(:hover, :focus-visible) {
       box-shadow: none;
    }
@@ -16,4 +20,6 @@
       padding-bottom: em(7,20);
       @include rfs(20px);
    }
+
+   
 }
